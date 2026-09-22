@@ -39,3 +39,15 @@ ul{
     margin-right: 25%;
     font-family: 'times new roman', serif;
 }
+a:link {
+  color: #7e009e;        /* unvisited links */
+}
+a:visited {
+  color: #030050;        /* links the user has already clicked */
+}
+a:hover {
+  color: #870000;        /* mouse hovering over the link */
+}
+a:active {
+  color: #ffffff;        /* the moment it's being clicked */
+}
