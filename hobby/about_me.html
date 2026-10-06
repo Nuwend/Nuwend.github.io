@@ -33,15 +33,29 @@
             font-size: 30px;
             font-family: 'zcool xiaowei', cursive;
         }
+        .card {
+            display: block;
+            margin: 10px;
+            width: 20%;
+        }
+        .card-row {
+            display: flex;
+            justify-content: center;
+            gap: 0px;
+        }
     </style>
 </head>
 <body>
     <h1>The World of Yu-Gi-Oh!</h1>
-    <img src="logo.png" alt="Yu-Gi-Oh! Logo" style="display: block; margin: 0 auto; width: 50%;">
+    <img src="images/logo.png" alt="Yu-Gi-Oh! Logo" style="display: block; margin: 0 auto; width: 50%;">
     <h2>About Me</h2>
     <p>My name is Muhammad Musa, and I am a passionate fan of the Yu-Gi-Oh! trading card game. I have been playing Yu-Gi-Oh! for several years and have developed a deep understanding of the game's mechanics, strategies, and lore. My love for the game has led me to participate in local tournaments and engage with the Yu-Gi-Oh! community online.</p>
     <p>In addition to playing the game, I enjoy collecting rare and valuable cards, as well as building competitive decks. Some of my personal favorite decks to play include: Vanquish Soul, Blitzclique, and White Forest. I am always looking for new ways to improve my skills and stay up-to-date with the latest card releases and meta trends.</p>
-    <img src="CaesarValius.jpg" alt="Caesar Valius" style="display: block; margin: 0 auto; width: 50%;"> <img src="WhiskerBlitzclique.jpg" alt="Whisker Blitzclique" style="display: block; margin: 0 auto; width: 50%;">
+    <div class="card-row">
+        <img class="card" src="images/CaesarValius.jpg" alt="Vanuish Soul Caesar Valius">
+        <img class="card" src="images/WhiskerBlitzclique.jpg" alt="Whisker Blitzclique">
+        <img class="card" src="images/Diabell.jpg" alt="Diabell, Queen of the White Forest">
+    </div>
     <p>Through this website, I aim to share my knowledge and experiences with fellow Yu-Gi-Oh! enthusiasts, providing insights into the game's history, recent developments, and strategic approaches. I hope to connect with other players who share my passion for the game and foster a community where we can learn from each other and grow as duelists.</p>
     <h3>It's time to duel!</h3> <!--to be a link to the home page-->
 </body>
