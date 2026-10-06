@@ -4,7 +4,7 @@ body {
 h1 {
     color: rgb(36, 28, 28);
     text-align: center;
-    font-family: 'Fira Code', monospace;
+    font-family: "Monimer Serif", serif;
     margin: 0 auto;
 }
 hr {
@@ -27,7 +27,7 @@ h3 {
 p {
     margin-left: 25%;
     margin-right: 25%;
-    font-family: 'times new roman', serif;
+    font-family: 'Fira Code', monospace;
 }
 footer {
     text-align: center;
@@ -50,4 +50,15 @@ a:hover {
 }
 a:active {
   color: #ffffff;        /* the moment it's being clicked */
+}
+@font-face {
+  font-family: "Monimer Serif";
+  src: url("fonts/Monimer-Serif.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+h4 {
+    color: rgb(107, 10, 44);
+    text-align: center;
+    font-family: 'Fira Code', monospace;
 }
