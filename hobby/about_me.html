@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Isometra&family=Yeon+Sung&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <title>The World of Yu-Gi-Oh!</title>
+    <link rel="icon" type="image/jpeg" href="images/ygoCardBack.jpg">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Isometra&family=Yeon+Sung&family=ZCOOL+XiaoWei&display=swap'); /*Yeon Sung, Isometra, Xiao Wei font*/
+
         body {
             background-color: rgb(25, 0, 0);
             color: white;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-family: 'Fira Code', monospace;
         }
         h1{
             text-align: center;
@@ -27,11 +33,17 @@
             margin-left: 10%;
             margin-right: 10%;
             font-size: 20px;
+            font-family: 'Fira Code', monospace;
         }
+        
         h3{
             text-align: center;
             font-size: 30px;
             font-family: 'zcool xiaowei', cursive;
+        }
+
+        hr{
+            opacity: 0%;
         }
         .card {
             display: block;
@@ -43,20 +55,237 @@
             justify-content: center;
             gap: 0px;
         }
-    </style>
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Isometra', sans-serif;
+            font-size: 20px;
+        }
+        section {
+            display: none;
+            padding: 20px 5%;
+        }
+
+        .active {
+            display: block;
+        }
+        .related-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .related-content .intro {
+            flex: 1;
+            margin: 0;
+        }
+
+        .related-content figure {
+            flex: 1;
+            margin: 0;
+            text-align: center;
+        }
+
+        .related-content figure img {
+            width: 100%;
+            height: auto;
+        }
+
+        .related-content .booster-image{
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .related-content .MDLogo{
+            width: 250px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #when .related-content figure {
+            flex: 0 0 auto;
+        }
+        .slideshow {
+            max-width: 350px;
+            aspect-ratio: 3/4;
+            margin: 20px auto;
+        }
+
+        .slideshow .slide {
+            display: none;
+            height: 100%;
+            margin: 0;
+            object-fit: contain;
+        }
+
+        .slideshow .showing {
+            display: block;
+        }
+
+        @keyframes slide-in-right {
+            from {
+                transform: translateX(100vw);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        #who .card-row {
+            overflow-x: hidden;
+        }
+
+        #who .card {
+            animation: slide-in-right 1s ease-out both;
+        }
+
+        #who .card:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        #who .card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        
+        </style>
 </head>
 <body>
-    <h1>The World of Yu-Gi-Oh!</h1>
-    <img src="images/logo.png" alt="Yu-Gi-Oh! Logo" style="display: block; margin: 0 auto; width: 50%;">
-    <h2>About Me</h2>
-    <p>My name is Muhammad Musa, and I am a passionate fan of the Yu-Gi-Oh! trading card game. I have been playing Yu-Gi-Oh! for several years and have developed a deep understanding of the game's mechanics, strategies, and lore. My love for the game has led me to participate in local tournaments and engage with the Yu-Gi-Oh! community online.</p>
-    <p>In addition to playing the game, I enjoy collecting rare and valuable cards, as well as building competitive decks. Some of my personal favorite decks to play include: Vanquish Soul, Blitzclique, and White Forest. I am always looking for new ways to improve my skills and stay up-to-date with the latest card releases and meta trends.</p>
-    <div class="card-row">
-        <img class="card" src="images/CaesarValius.jpg" alt="Vanuish Soul Caesar Valius">
-        <img class="card" src="images/WhiskerBlitzclique.jpg" alt="Whisker Blitzclique">
-        <img class="card" src="images/Diabell.jpg" alt="Diabell, Queen of the White Forest">
-    </div>
-    <p>Through this website, I aim to share my knowledge and experiences with fellow Yu-Gi-Oh! enthusiasts, providing insights into the game's history, recent developments, and strategic approaches. I hope to connect with other players who share my passion for the game and foster a community where we can learn from each other and grow as duelists.</p>
-    <h3>It's time to duel!</h3> <!--to be a link to the home page-->
+    <header>
+        <h1>The World of Yu-Gi-Oh!</h1>
+        <img src="images/logo.png" alt="Yu-Gi-Oh! Logo" style="display: block; margin: 0 auto; width: 500px;">
+        <nav>
+            <a href="#who">Who</a> ✦
+            <a href="#what">What</a> ✦
+            <a href="#when">When</a> ✦
+            <a href="#where">Where</a> ✦
+            <a href="#how">How</a> ✦
+            <a href="#why">Why</a>
+        </nav>
+    </header>
+    <main>
+        <section id="who">
+            <h2>About Me</h2>
+            <p>My name is Muhammad Musa, and I am a passionate fan of the Yu-Gi-Oh! trading card game. I have been playing Yu-Gi-Oh! for several years and have developed a deep understanding of the game's mechanics, strategies, and lore. My love for the game has led me to participate in local tournaments and engage with the Yu-Gi-Oh! community online.</p>
+            <p>In addition to playing the game, I enjoy collecting rare and valuable cards, as well as building competitive decks. Some of my personal favorite decks to play include: Vanquish Soul, Blitzclique, and White Forest. I am always looking for new ways to improve my skills and stay up-to-date with the latest card releases and meta trends.</p>
+            <div class="card-row">
+                <img class="card" src="images/CaesarValius.jpg" alt="Vanquish Soul Caesar Valius">
+                <img class="card" src="images/WhiskerBlitzclique.jpg" alt="Whisker Blitzclique">
+                <img class="card" src="images/Diabell.jpg" alt="Diabell, Queen of the White Forest">
+            </div>
+            <p>Through this website, I aim to share my knowledge and experiences with fellow Yu-Gi-Oh! enthusiasts, providing insights into the game's history, recent developments, and strategic approaches. I hope to connect with other players who share my passion for the game and foster a community where we can learn from each other and grow as duelists.</p>
+        </section>
+
+        <section id="what">
+            <h2>What is Yu-Gi-Oh!?</h2>
+            <div class="related-content">
+                <p class="intro">Yu-Gi-Oh! is a popular trading card game that originated in Japan and has since gained a global following. Created by Kazuki Takahashi, the game originated as a manga series following the protagonist Yugi Moto. The original manga actually wasn't centered around the trading card game at first, but a variety of different table top games reflecting Takahashi's love of games. One of those games called Dragons and Wizards caught the interest of readers, and the series would later be rebooted into Yu-Gi-Oh! Duel Monsters, which focused on the trading card game. The game has since expanded into a multimedia franchise, including an anime series, video games, and a wide range of merchandise.</p>
+                <figure>
+                    <img src="images/KazukiTakahashi.jpg" alt="A photo of Kazuki Takahashi, the creator of Yu-Gi-Oh!">
+                    <figcaption>A photo of Kazuki Takahashi, the creator of Yu-Gi-Oh!</figcaption>
+                </figure>
+            </div>
+            <p>The game involves players using decks of cards to duel against each other, with the goal of reducing their opponent's life points to zero. Each player takes turns drawing cards, summoning monsters, and activating spells and traps to outmaneuver their opponent.</p>
+            <p>The game is known for its complex rules and strategic depth, requiring players to think critically and plan their moves carefully. With thousands of unique cards available, players can customize their decks to suit their preferred playstyle and strategy.</p>
+        </section>
+
+        <section id="when">
+            <h2>When Did Yu-Gi-Oh! Start?</h2>
+            <div class="related-content">
+                <p class="intro">The Yu-Gi-Oh! trading card game was first released in 1999 by Konami with the set "Vol.1", following the success of the manga and anime series. The game quickly gained popularity in Japan and eventually spread to other countries, including the United States and Europe. This has led to a branch in the formats the game is played in; with the TCG (Trading Card Game) for western territories, and OCG (Original Card Game) for eastern territories, being the two main formats.</p>
+                <figure>
+                    <img class="booster-image" src="images/V1-BoosterJP.jpg" alt="The first set of the Yu-Gi-Oh! trading card game, Vol. 1">
+                    <figcaption>The first set of the Yu-Gi-Oh! trading card game, Vol. 1</figcaption>
+                </figure>
+            </div>
+                <div class="related-content">
+                    <figure>
+                        <div class="slideshow">
+                            <img class="slide showing" src="images/BETB.png" alt="The most recent set of the Yu-Gi-Oh! TCG, Beyond the Brave">
+                            <img class="slide" src="images/ArsMagna.jpg" alt="The Ars Magna cards, a new archetype introduced in Beyond the Brave">
+                            <img class="slide" src="images/DarkTimeWizard.jpg" alt="The Dark Time Wizard cards, a new archetype introduced in Beyond the Brave">
+                            <img class="slide" src="images/Umi.jpg" alt="The Umi cards, an archetype that received new support in Beyond the Brave">
+                        </div>
+                        <figcaption>Beyond the Brave, the most recent set at the time of writing, and some of its new cards</figcaption>
+                    </figure>
+                    <p class="intro">Since its initial release, the game has undergone several updates and expansions, introducing new cards, mechanics, and formats to keep the gameplay fresh and engaging for players of all skill levels. The most recent set released (at the time of writing) is "Beyond the Brave" which added new support for a popular archetype in "Umi", the expansion on one of Yu-Gi-Oh's lore archetypes with the "Ars Magna" cards, and the introduction of the new "Dark Time Wizard" cards.</p>
+                </div>
+        </section>
+
+        <section id="where">
+            <h2>Where Can You Play Yu-Gi-Oh!?</h2>
+            <p>Whether you prefer to play in person or online, there are plenty of opportunities to enjoy the Yu-Gi-Oh! trading card game and connect with other players who share your passion for the game.</p>
+            <p>If you're looking for in person play, many local game stores host regular events and tournaments where players can compete against each other and test their skills. You can also use the Yu-Gi-Oh! neuron app to find local events and tournaments. The app also helps keep track of your performance and progress to take part in major events.</p>
+            <div class="related-content">
+                <p class="intro">If you prefer to play online, there are several platforms available that allow you to play the game virtually. Yu-Gi-Oh Master Duel is the official online platform for the game, offering a digital version of the trading card game that can be played on PC, consoles, and mobile devices.</p>
+                <figure>
+                    <img class="MDLogo" src="images/masterduel.jpg" alt="Master Duel logo on steam">
+                    <figcaption>Yu-Gi-Oh Master Duel</figcaption>
+                </figure>
+            </div>
+            <p>The game is completely free to play, with optional in-game purchases available for those who wish to enhance their experience. The game simulates all aspects of the TCG with pack openings, deck building, and strategic gameplay. If you don't pull the cards you want for your deck, the game also includes a crafting system that lets you craft any card in the game, with the exception of alternate art cards, and some limited time event cards.</p>
+        </section>
+
+        <section id="how">
+            <h2>How to Play Yu-Gi-Oh!</h2>
+            <p>The Yu-Gi-Oh! trading card game is played between two players, each using a deck of cards that they have constructed. The objective of the game is to reduce your opponent's life points to zero by attacking with monsters and using spells and traps to gain an advantage.</p>
+            <p>The game features a wide variety of cards, each with its own unique abilities and effects. Players can customize their decks to suit their preferred playstyle and strategy, making each game a unique experience.</p>
+            <p>Players take turns drawing cards, summoning monsters, and activating spells and traps to outmaneuver their opponent. The game is known for its complex rules and strategic depth, requiring players to think critically and plan their moves carefully.</p>
+            <hr>
+            <div class="related-content">
+                <p class="intro">There are many ways to play Yu-Gi-Oh! depending on your preferences. The standard way to play is known as Advanced Format, where every card in the game is available for use except for those that are banned or limited (which means that only one copy can be in your deck, as opposed to the 3 copies that an unlimited card can be).</p>
+                <p class="intro">If you want a lower power format that still allows for interesting strategies, Edison Format might be the right choice for you. For people who enjoyed the simpler formats of the past, Goat Format allows players to experience the very early, Duel Monsters era of Yu-Gi-Oh, with Much older and powerful cards that are no longer available in the Advanced format.</p>
+            </div>
+            <div class="related-content">
+                <p class="intro">If the action packed gamplay of Advanced is interesting to you, but some of the things there aren't quite what you're looking for, consider trying Genesys Format, which makes significant changes to the standard rules. Firstly it removes link and pendulum monsters from the game as they can be too complex and hard to balance. Secondly there is no longer a banlist; instead powerful cards are assigned a point value and you build your deck around those points, with a standard maximum point value of 100. While ther technically isn't a banlist, some cards are pointed at 100, meaning that would be the only powerful card you can include in your deck.</p>
+                <figure>
+                    <div class="slideshow">
+                        <img class="slide showing" src="images/YGOAdvanced.jpg" alt="Advanced Format logo">
+                        <img class="slide" src="images/Edison_logo.png" alt="Edison Format logo">
+                        <img class="slide" src="images/goatformatlogo.png" alt="Goat Format logo">
+                        <img class="slide" src="images/genesys_logo.png" alt="Genesys Format logo">
+                    </div>
+                    <figcaption>Yu-Gi-Oh! Formats</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+    <footer>
+        Designed by Muhammad Musa
+    </footer>
+    <script>
+        const sections = document.querySelectorAll('section');
+        const links = document.querySelectorAll('nav a');
+
+        function showSection(id) {
+            sections.forEach((s) => s.classList.toggle('active', s.id === id));
+        }
+
+        links.forEach((link) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                showSection(link.getAttribute('href').slice(1));
+            });
+        });
+
+        showSection('what');
+
+        const slideshows = document.querySelectorAll('.slideshow');
+
+        slideshows.forEach((slideshow) => {
+            const slides = slideshow.querySelectorAll('.slide');
+            let currentSlide = 0;
+
+            setInterval(() => {
+                slides[currentSlide].classList.remove('showing');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('showing');
+            }, 4000);
+        });
+    </script>
 </body>
 </html>
