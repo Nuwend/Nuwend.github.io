@@ -21,9 +21,15 @@
     <h2>Highlights:</h2>
     <p>This is the Highlights page.</p>
     
-    <footer>
-    Designed by <a href="index.html">Muhammad Musa</a>
-    </footer>
+    <div id="footer-placeholder"></div>
+
+<script>
+    fetch('includes/footer.html')
+        .then((response) => response.text())
+        .then((html) => {
+            document.getElementById('footer-placeholder').innerHTML = html;
+        });
+</script>
 </body>
 
 

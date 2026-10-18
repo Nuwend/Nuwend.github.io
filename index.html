@@ -26,9 +26,15 @@
         You can view my <a href="Home.html"> ITIS 3135 course website</a>.
     </p>
     </main>
-    <footer>
-    Designed by Muhammad Musa
-    </footer>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('includes/footer.html')
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+            });
+    </script>
 
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
