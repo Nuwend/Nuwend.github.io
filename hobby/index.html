@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The World of Yu-Gi-Oh!</title>
+    <title>The World of Yu-Gi-Oh! ✦ What Is Yu-Gi-Oh!?</title>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
     <link rel="icon" type="image/jpeg" href="images/ygoCardBack.jpg">
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Isometra&family=Yeon+Sung&family=ZCOOL+XiaoWei&display=swap'); /*Yeon Sung, Isometra, Xiao Wei font*/
+        @import url('https://fonts.googleapis.com/css2?family=Isometra&family=Yeon+Sung&family=ZCOOL+XiaoWei&family=Fira+Code&display=swap'); /*Yeon Sung, Isometra, Xiao Wei font*/
 
         body {
             background-color: rgb(25, 0, 0);
-            color: white;
+            /* white text on the dark red background, chosen instead of black for strong contrast */
+            color: white; 
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        header, main, footer {
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
         }
         footer {
             text-align: center;
@@ -45,11 +53,7 @@
         hr{
             opacity: 0%;
         }
-        .card {
-            display: block;
-            margin: 10px;
-            width: 20%;
-        }
+
         .card-row {
             display: flex;
             justify-content: center;
@@ -105,6 +109,13 @@
             margin: 0 auto;
         }
 
+        .related-content .DM{
+            width: 400px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
         #when .related-content figure {
             flex: 0 0 auto;
         }
@@ -136,20 +147,31 @@
             }
         }
 
-        #who .card-row {
-            overflow-x: hidden;
+        .card-row figure {
+            width: 20%;
+            margin: 10px;
+            text-align: center;
         }
 
-        #who .card {
+        .card-row figure img {
+            width: 100%;
+            height: auto;
+        }
+
+        #who figure {
             animation: slide-in-right 1s ease-out both;
         }
 
-        #who .card:nth-child(2) {
+        #who figure:nth-child(2) {
             animation-delay: 0.3s;
         }
 
-        #who .card:nth-child(3) {
+        #who figure:nth-child(3) {
             animation-delay: 0.6s;
+        }
+
+        #who .card-row {
+            overflow-x: hidden;
         }
         
         a {
@@ -162,27 +184,68 @@
         }
 
         a:hover {
+            /* white text on the dark red background, chosen instead of black for strong contrast */
             color: white;
             text-decoration: underline;
         }
 
         a:focus {
+            /* white text on the dark red background, chosen instead of black for strong contrast */
             color: white;
             outline: 2px solid gold;
         }
+
+        figcaption p {
+            margin: 5px 0 0 0;
+            font-size: 16px;
+        }
+
+        .validator {
+            display: inline-block;
+            padding: 6px 14px;
+            margin: 0 5px;
+            border: 2px solid gold;
+            border-radius: 6px;
+            color: gold;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .validator:hover {
+            background-color: gold;
+            color: rgb(25, 0, 0);
+        }
+
+        @media (max-width: 700px) {
+            .related-content {
+                flex-direction: column;
+            }
+        }
+
         </style>
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Divs are used for layout only: .related-content and .card-row wrap an image and text so flexbox can place them side by side, and .slideshow wraps the rotating images so the script can find each group. A span is used only to wrap the nav divider symbols so they can be hidden from screen readers. -->
+<!-- Classes and ids are used for a reason: ids (what, who, when, where, how, why, prompts) let the nav links and the script target each section, and classes (card, slide, showing, validator, intro) let me style or select groups of elements without repeating CSS. -->
     <header>
         <h1>The World of Yu-Gi-Oh!</h1>
+        <!-- Inline style used once on the logo to center it and set its width, since it is the only image with this exact sizing. -->
         <img src="images/logo.png" alt="Yu-Gi-Oh! Logo" style="display: block; margin: 0 auto; width: 500px;">
         <nav>
-            <a href="#who">Who</a> ✦
-            <a href="#what">What</a> ✦
-            <a href="#when">When</a> ✦
-            <a href="#where">Where</a> ✦
-            <a href="#how">How</a> ✦
+            <a href="#what">What</a>
+            <span class="divider" aria-hidden="true">✦</span>
+            <a href="#who">Who</a>
+            <span class="divider" aria-hidden="true">✦</span>
+            <a href="#when">When</a>
+            <span class="divider" aria-hidden="true">✦</span>
+            <a href="#where">Where</a>
+            <span class="divider" aria-hidden="true">✦</span>
+            <a href="#how">How</a>
+            <span class="divider" aria-hidden="true">✦</span>
             <a href="#why">Why</a>
+            <span class="divider" aria-hidden="true">✦</span>
+            <a href="#prompts">AI Prompts</a>
         </nav>
     </header>
     <main>
@@ -191,20 +254,43 @@
             <p>My name is Muhammad Musa, and I am a passionate fan of the Yu-Gi-Oh! trading card game. I have been playing Yu-Gi-Oh! for several years and have developed a deep understanding of the game's mechanics, strategies, and lore. My love for the game has led me to participate in local tournaments and engage with the Yu-Gi-Oh! community online.</p>
             <p>In addition to playing the game, I enjoy collecting rare and valuable cards, as well as building competitive decks. Some of my personal favorite decks to play include: Vanquish Soul, Blitzclique, and White Forest. I am always looking for new ways to improve my skills and stay up-to-date with the latest card releases and meta trends.</p>
             <div class="card-row">
-                <img class="card" src="images/CaesarValius.jpg" alt="Vanquish Soul Caesar Valius">
-                <img class="card" src="images/WhiskerBlitzclique.jpg" alt="Whisker Blitzclique">
-                <img class="card" src="images/Diabell.jpg" alt="Diabell, Queen of the White Forest">
+                <figure>
+                    <img src="images/CaesarValius.jpg" alt="Vanquish Soul Caesar Valius">
+                    <figcaption>
+                        Vanquish Soul Caesar Valius
+                        <p><em>Image found on ygoprodeck.com</em></p>
+                    </figcaption>
+                    
+                </figure>
+                <figure>
+                    <img src="images/WhiskerBlitzclique.jpg" alt="Whisker Blitzclique">
+                    <figcaption>
+                        Whisker Blitzclique
+                        <p><em>Image found on ygoprodeck.com</em></p>
+                    </figcaption>
+                    
+                </figure>
+                <figure>
+                    <img src="images/Diabell.jpg" alt="Diabell, Queen of the White Forest">
+                    <figcaption>
+                        Diabell, Queen of the White Forest
+                        <p><em>Image found on ygoprodeck.com</em></p>
+                    </figcaption>
+                </figure>
             </div>
             <p>Through this website, I aim to share my knowledge and experiences with fellow Yu-Gi-Oh! enthusiasts, providing insights into the game's history, recent developments, and strategic approaches. I hope to connect with other players who share my passion for the game and foster a community where we can learn from each other and grow as duelists.</p>
         </section>
 
         <section id="what">
-            <h2>What is Yu-Gi-Oh!?</h2>
+            <h2>What Is Yu-Gi-Oh!?</h2>
             <div class="related-content">
                 <p class="intro">Yu-Gi-Oh! is a popular trading card game that originated in Japan and has since gained a global following. Created by Kazuki Takahashi, the game originated as a manga series following the protagonist Yugi Moto. The original manga actually wasn't centered around the trading card game at first, but a variety of different table top games reflecting Takahashi's love of games. One of those games called Dragons and Wizards caught the interest of readers, and the series would later be rebooted into Yu-Gi-Oh! Duel Monsters, which focused on the trading card game. The game has since expanded into a multimedia franchise, including an anime series, video games, and a wide range of merchandise.</p>
                 <figure>
                     <img src="images/KazukiTakahashi.jpg" alt="A photo of Kazuki Takahashi, the creator of Yu-Gi-Oh!">
-                    <figcaption>A photo of Kazuki Takahashi, the creator of Yu-Gi-Oh!</figcaption>
+                    <figcaption>
+                        A photo of Kazuki Takahashi, the creator of Yu-Gi-Oh!
+                        <p><em>Image found on google.com</em></p>
+                    </figcaption>
                 </figure>
             </div>
             <p>The game involves players using decks of cards to duel against each other, with the goal of reducing their opponent's life points to zero. Each player takes turns drawing cards, summoning monsters, and activating spells and traps to outmaneuver their opponent.</p>
@@ -217,7 +303,10 @@
                 <p class="intro">The Yu-Gi-Oh! trading card game was first released in 1999 by Konami with the set "Vol.1", following the success of the manga and anime series. The game quickly gained popularity in Japan and eventually spread to other countries, including the United States and Europe. This has led to a branch in the formats the game is played in; with the TCG (Trading Card Game) for western territories, and OCG (Original Card Game) for eastern territories, being the two main formats.</p>
                 <figure>
                     <img class="booster-image" src="images/V1-BoosterJP.jpg" alt="The first set of the Yu-Gi-Oh! trading card game, Vol. 1">
-                    <figcaption>The first set of the Yu-Gi-Oh! trading card game, Vol. 1</figcaption>
+                    <figcaption>
+                        The first set of the Yu-Gi-Oh! trading card game, Vol. 1
+                        <p><em>Image found on the yugioh fandom wiki.</em></p>
+                    </figcaption>
                 </figure>
             </div>
                 <div class="related-content">
@@ -228,7 +317,10 @@
                             <img class="slide" src="images/DarkTimeWizard.jpg" alt="The Dark Time Wizard cards, a new archetype introduced in Beyond the Brave">
                             <img class="slide" src="images/Umi.jpg" alt="The Umi cards, an archetype that received new support in Beyond the Brave">
                         </div>
-                        <figcaption>Beyond the Brave, the most recent set at the time of writing, and some of its new cards</figcaption>
+                        <figcaption>
+                            Beyond the Brave, the most recent set at the time of writing, and some of its new cards
+                            <p><em>Images found on ygoprodeck.com</em></p>
+                        </figcaption>
                     </figure>
                     <p class="intro">Since its initial release, the game has undergone several updates and expansions, introducing new cards, mechanics, and formats to keep the gameplay fresh and engaging for players of all skill levels. The most recent set released (at the time of writing) is "Beyond the Brave" which added new support for a popular archetype in "Umi", the expansion on one of Yu-Gi-Oh's lore archetypes with the "Ars Magna" cards, and the introduction of the new "Dark Time Wizard" cards.</p>
                 </div>
@@ -242,7 +334,10 @@
                 <p class="intro">If you prefer to play online, there are several platforms available that allow you to play the game virtually. Yu-Gi-Oh Master Duel is the official online platform for the game, offering a digital version of the trading card game that can be played on PC, consoles, and mobile devices.</p>
                 <figure>
                     <img class="MDLogo" src="images/masterduel.jpg" alt="Master Duel logo on steam">
-                    <figcaption>Yu-Gi-Oh Master Duel</figcaption>
+                    <figcaption>
+                        Yu-Gi-Oh Master Duel
+                    <p><em>Logo found on steam.</em></p>
+                </figcaption>
                 </figure>
             </div>
             <p>The game is completely free to play, with optional in-game purchases available for those who wish to enhance their experience. The game simulates all aspects of the TCG with pack openings, deck building, and strategic gameplay. If you don't pull the cards you want for your deck, the game also includes a crafting system that lets you craft any card in the game, with the exception of alternate art cards, and some limited time event cards.</p>
@@ -267,20 +362,37 @@
                         <img class="slide" src="images/goatformatlogo.png" alt="Goat Format logo">
                         <img class="slide" src="images/genesys_logo.png" alt="Genesys Format logo">
                     </div>
-                    <figcaption>Yu-Gi-Oh! Formats</figcaption>
+                    <figcaption>
+                        Yu-Gi-Oh! Formats
+                        <p><em>Images found on google.com</em></p>
+                    </figcaption>
                 </figure>
             </div>
         </section>
 
         <section id="why">
             <h2>Why Play Yu-Gi-Oh!?</h2>
-            <p>There are many reasons to play the Yu-Gi-Oh! trading card game, from the strategic depth and complexity of the gameplay to the social and community aspects of the game. Playing Yu-Gi-Oh! can help improve critical thinking, problem-solving, and decision-making skills, as players must analyze their options and make strategic choices in order to succeed.</p>
+            <div class="related-content">
+                <p class="intro">There are many reasons to play the Yu-Gi-Oh! trading card game, from the strategic depth and complexity of the gameplay to the social and community aspects of the game. Playing Yu-Gi-Oh! can help improve critical thinking, problem-solving, and decision-making skills, as players must analyze their options and make strategic choices in order to succeed.</p>
+                <figure>
+                    <img class="DM" src="images/yu-gi-oh-duel-monsters.jpg" alt="Yu-Gi-Oh! Duel Monsters">
+                    <figcaption>
+                        Yu-Gi-Oh! Duel Monsters
+                        <p><em>Image found on google.com</em></p>
+                    </figcaption>
+                </figure>
+            </div>
             <p>In addition to the mental benefits, playing Yu-Gi-Oh! can also be a fun and rewarding hobby. The game offers a wide variety of cards and strategies to explore, allowing players to express their creativity and develop their own unique playstyle. The social aspect of the game also provides opportunities to connect with other players, make new friends, and participate in tournaments and events.</p>
             <p>Overall, playing Yu-Gi-Oh! can be a fulfilling and enjoyable experience for players of all ages and skill levels. Whether you're a seasoned veteran or a newcomer to the game, there is always something new to discover and explore in the world of Yu-Gi-Oh!</p>
         </section>
     </main>
     <footer>
-        Designed by Muhammad Musa
+        <p>
+            <a class="validator" href="https://validator.w3.org/check?uri=referer">HTML</a>
+            <a class="validator" href="https://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+            <a class="validator" href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/mmusa2/hobby/">Accessibility</a>
+        </p>
+        <i>Designed by Muhammad Musa</i>
     </footer>
     <script>
         const sections = document.querySelectorAll('section');
@@ -288,6 +400,8 @@
 
         function showSection(id) {
             sections.forEach((s) => s.classList.toggle('active', s.id === id));
+            const heading = document.getElementById(id).querySelector('h2').textContent;
+            document.title = 'The World of Yu-Gi-Oh! ✦ ' + heading;
         }
 
         links.forEach((link) => {
@@ -297,7 +411,7 @@
             });
         });
 
-        showSection('who');
+        showSection('what');
 
         const slideshows = document.querySelectorAll('.slideshow');
 
