@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Musa | ITIS 3135 | Highlights</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="documentation.css">
+</head>
+
+<body>
+    <header id="header-placeholder"></header>
+
+    <main>
+        <h2>Documentation:</h2>
+
+        <div id="docs">
+            <nav id="navbar" aria-label="Documentation sections">
+                <h3>Web Development</h3>
+                <a href="#HTML_Basics">HTML Basics</a>
+                <a href="#CSS_Fundamentals">CSS Fundamentals</a>
+                <a href="#JavaScript">JavaScript</a>
+                <a href="#Responsive_Design">Responsive Design</a>
+                <a href="#Useful_Practices">Useful Practices</a>
+            </nav>
+
+            <div id="main-doc">
+                <section id="HTML_Basics">
+                    <h3>HTML Basics</h3>
+                    <p>HTML provides the structure of a web page using elements and tags.</p>
+                    <p>Most HTML documents begin with a document type declaration followed by the root <code>html</code> element.</p>
+                    <code>&lt;h1&gt;Hello World&lt;/h1&gt;</code>
+                    <ul>
+                        <li>HTML describes the structure of a webpage.</li>
+                        <li>Elements can contain text and other elements.</li>
+                    </ul>
+                </section>
+
+                <section id="CSS_Fundamentals">
+                    <h3>CSS Fundamentals</h3>
+                    <p>CSS controls the visual appearance of HTML elements.</p>
+                    <p>Styles can change colors, fonts, spacing, borders, and the layout of a page.</p>
+                    <code>body { font-family: Arial, sans-serif; }</code>
+                    <ul>
+                        <li>CSS stands for Cascading Style Sheets.</li>
+                        <li>Selectors determine which elements receive styles.</li>
+                    </ul>
+                </section>
+
+                <section id="JavaScript">
+                    <h3>JavaScript</h3>
+                    <p>JavaScript adds behavior and interactivity to web pages.</p>
+                    <p>Variables can store information that your program can use later.</p>
+                    <code>let message = "Hello World";</code>
+                    <code>console.log(message);</code>
+                    <ul>
+                        <li>JavaScript can respond to user actions.</li>
+                        <li>Functions allow code to be reused.</li>
+                    </ul>
+                </section>
+
+                <section id="Responsive_Design">
+                    <h3>Responsive Design</h3>
+                    <p>Responsive design allows a website to adapt to different screen sizes.</p>
+                    <p>Media queries can apply different CSS rules depending on the width of the device.</p>
+                    <code>@media (max-width: 768px) { }</code>
+                    <ul>
+                        <li>Responsive pages work on phones, tablets, and computers.</li>
+                        <li>Flexible layouts help content fit different screens.</li>
+                    </ul>
+                </section>
+
+                <section id="Useful_Practices">
+                    <h3>Useful Practices</h3>
+                    <p>Writing organized code makes websites easier to maintain and understand.</p>
+                    <p>Use meaningful names for classes, IDs, variables, and functions.</p>
+                    <code>const userName = "Alex";</code>
+                    <ul>
+                        <li>Keep your HTML properly organized.</li>
+                        <li>Use comments when they improve understanding.</li>
+                        <li>Test your website at different screen sizes.</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('includes/header.html')
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById('header-placeholder').innerHTML = html;
+            });
+    </script>
+
+    <script>
+        fetch('includes/footer.html')
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+            });
+    </script>
+</body>
+</html>

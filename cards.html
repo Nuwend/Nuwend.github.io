@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Musa | ITIS 3135 | Gallery</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header id="header-placeholder"></header>
+
+    <main>
+        <h2>Cards:</h2>
+        <p>A small hand dealt with flexbox.</p>
+
+        <div id="playing-cards">
+            <div class="card">
+                <div class="left"><span>A</span><span class="suit">♠</span></div>
+                <div class="middle"><span>♠</span></div>
+                <div class="right"><span>A</span><span class="suit">♠</span></div>
+            </div>
+
+            <div class="card red">
+                <div class="left"><span>K</span><span class="suit">♥</span></div>
+                <div class="middle"><span>♥</span><span>♥</span></div>
+                <div class="right"><span>K</span><span class="suit">♥</span></div>
+            </div>
+
+            <div class="card red">
+                <div class="left"><span>7</span><span class="suit">♦</span></div>
+                <div class="middle"><span>♦</span><span>♦</span><span>♦</span></div>
+                <div class="right"><span>7</span><span class="suit">♦</span></div>
+            </div>
+
+            <div class="card">
+                <div class="left"><span>Q</span><span class="suit">♣</span></div>
+                <div class="middle"><span>♣</span><span>♣</span></div>
+                <div class="right"><span>Q</span><span class="suit">♣</span></div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('includes/header.html')
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById('header-placeholder').innerHTML = html;
+            });
+    </script>
+
+    <script>
+        fetch('includes/footer.html')
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+            });
+    </script>
+</body>
+</html>

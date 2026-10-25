@@ -5,32 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Musa | ITIS 3135 | Inventory</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="inventory.css">
 </head>
 
 <body>
-    <h1>Muhammad Musa | ITIS 3135 | Front end Web Development</h1>
-    <hr>
-    <h3>
-        <a href="Home.html">Home</a> || <a href="Introduction.html">Introduction</a> || <a href="itis3135/">Contract</a> || <a href="About.html">About</a> || <a href="Survey.html">Survey</a> || <a href="Inventory.html">Inventory</a> || <a href="gallery.html">Gallery</a> || <a href="instruction.html">Instructions</a> || <a href="highlight.html">Highlights</a>
-    </h3>
-    <hr>
-    <h2>Inventory:</h2>
-    <p>This is the Inventory page.</p>
-    
+    <header id="header-placeholder"></header>
+
+    <main>
+        <h2>Inventory:</h2>
+
+        <table id="inventory">
+            <caption>Book Inventory</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="read">
+                    <td>The Name of the Wind</td>
+                    <td>Patrick Rothfuss</td>
+                    <td>Fantasy</td>
+                    <td><span class="status">Read</span></td>
+                    <td>
+                        <span class="rate three" role="img" aria-label="Rated 3 out of 3">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr class="to-read">
+                    <td>Project Hail Mary</td>
+                    <td>Andy Weir</td>
+                    <td>Sci-Fi</td>
+                    <td><span class="status">To Read</span></td>
+                    <td>
+                        <span class="rate" role="img" aria-label="Not rated yet">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr class="in-progress">
+                    <td>Educated</td>
+                    <td>Tara Westover</td>
+                    <td>Memoir</td>
+                    <td><span class="status">In Progress</span></td>
+                    <td>
+                        <span class="rate" role="img" aria-label="Not rated yet">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr class="read">
+                    <td>Circe</td>
+                    <td>Madeline Miller</td>
+                    <td>Mythology</td>
+                    <td><span class="status">Read</span></td>
+                    <td>
+                        <span class="rate two" role="img" aria-label="Rated 2 out of 3">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr class="to-read">
+                    <td>The Fifth Season</td>
+                    <td>N.K. Jemisin</td>
+                    <td>Sci-Fi</td>
+                    <td><span class="status">To Read</span></td>
+                    <td>
+                        <span class="rate" role="img" aria-label="Not rated yet">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr class="read">
+                    <td>Gone Girl</td>
+                    <td>Gillian Flynn</td>
+                    <td>Thriller</td>
+                    <td><span class="status">Read</span></td>
+                    <td>
+                        <span class="rate one" role="img" aria-label="Rated 1 out of 3">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
     <div id="footer-placeholder"></div>
 
-<script>
-    fetch('includes/footer.html')
-        .then((response) => response.text())
-        .then((html) => {
-            document.getElementById('footer-placeholder').innerHTML = html;
-        });
-</script>
+    <script>
+        fetch('includes/header.html')
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById('header-placeholder').innerHTML = html;
+            });
+    </script>
+
+    <script>
+        fetch('includes/footer.html')
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+            });
+    </script>
 </body>
-
-
 </html>

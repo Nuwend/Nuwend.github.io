@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Musa | ITIS 3135 | Instructions</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+    <header id="header-placeholder"></header>
+
+    <main>
+        <h2>Product Information</h2>
+
+        <div id="product">
+            <nav id="nav-bar" aria-label="Product sections">
+                <a href="#features">Features</a>
+                <a href="#video-section">See It In Action</a>
+                <a href="#signup">Get Early Access</a>
+            </nav>
+
+            <section id="hero">
+                <h3>Meet Pulse</h3>
+                <p>The water bottle that quietly tracks your hydration and glows when it's time to sip.</p>
+                <a class="cta-button" href="#signup">Reserve Yours</a>
+            </section>
+
+            <section id="features">
+                <h3>Why People Love Pulse</h3>
+                <div class="feature-row">
+                    <div class="feature-card">
+                        <h4>Gentle Reminders</h4>
+                        <p>A soft ring of light pulses when you've gone too long without a sip, with no buzzing and no noise.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>7-Day Battery</h4>
+                        <p>Charge it once a week and forget about it. Pulse sips almost no power to track yours.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Built to Last</h4>
+                        <p>Double-walled steel keeps drinks cold for 24 hours and survives the occasional drop.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="video-section">
+                <h3>See It In Action</h3>
+                <div class="video-container">
+                    <iframe id="video" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Pulse product demo" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <section id="signup">
+                <h3>Get Early Access</h3>
+                <p>Join the list and we'll let you know the moment Pulse ships.</p>
+                <form id="form" action="https://www.freecodecamp.org/email-submit" method="get">
+                    <input id="email" name="email" type="email" aria-label="Email address" placeholder="Enter your email address" required>
+                    <input id="submit" type="submit" value="Notify Me">
+                </form>
+            </section>
+
+            <p>&copy; 2026 Pulse. A small idea, kept close.</p>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('includes/header.html')
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById('header-placeholder').innerHTML = html;
+            });
+    </script>
+
+    <script>
+        fetch('includes/footer.html')
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+            });
+    </script>
+</body>
+</html>

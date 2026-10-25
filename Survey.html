@@ -7,24 +7,105 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>Muhammad Musa | ITIS 3135 | Front end Web Development</h1>
-    <hr>
-    <h3>
-        <a href="Home.html">Home</a> || <a href="Introduction.html">Introduction</a> || <a href="itis3135/">Contract</a> || <a href="About.html">About</a> || <a href="Survey.html">Survey</a> || <a href="Inventory.html">Inventory</a> || <a href="gallery.html">Gallery</a> || <a href="instruction.html">Instructions</a> || <a href="highlight.html">Highlights</a>
-    </h3>
-    <hr>
-    <h2>Survey:</h2>
-    <p>This is the Survey page.</p>
-    
-    <footer>
-    Designed by <a href="index.html">Muhammad Musa</a>
-    </footer>
+    <header id="header-placeholder"></header>
+
+    <main>
+        <h2 id="title">Playtest Survey</h2>
+        <p id="description">Thanks for trying my 2D platformer. Tell me where you got stuck, what felt good, and what you want to see in the next build.</p>
+
+        <form id="survey-form" action="https://register-demo.freecodecamp.org" method="post">
+            <div class="field">
+                <label id="name-label" for="name">Player name</label>
+                <input id="name" name="name" type="text" placeholder="What should I call you?" required>
+            </div>
+
+            <div class="field">
+                <label id="email-label" for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="field">
+                <label id="number-label" for="number">Hours played <span class="hint">(0 to 100)</span></label>
+                <input id="number" name="hours" type="number" min="0" max="100" step="0.5" placeholder="How long did you play?">
+            </div>
+
+            <div class="field">
+                <label for="dropdown">Which level was your favorite?</label>
+                <select id="dropdown" name="level">
+                    <option value="">Select a level</option>
+                    <option value="tutorial">Tutorial meadow</option>
+                    <option value="caves">Crystal caves</option>
+                    <option value="clocktower">Clocktower climb</option>
+                    <option value="boss">Final boss arena</option>
+                </select>
+            </div>
+
+            <fieldset>
+                <legend>How hard did the game feel?</legend>
+                <div class="choice">
+                    <input type="radio" id="easy" name="difficulty" value="easy" checked>
+                    <label for="easy">Too easy</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="fair" name="difficulty" value="fair">
+                    <label for="fair">Just right</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="hard" name="difficulty" value="hard">
+                    <label for="hard">Too hard</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>What should I improve? <span class="hint">(pick any)</span></legend>
+                <div class="choice">
+                    <input type="checkbox" id="controls" name="improve" value="controls">
+                    <label for="controls">Controls and jump feel</label>
+                </div>
+                <div class="choice">
+                    <input type="checkbox" id="art" name="improve" value="art">
+                    <label for="art">Art and animation</label>
+                </div>
+                <div class="choice">
+                    <input type="checkbox" id="sound" name="improve" value="sound">
+                    <label for="sound">Music and sound</label>
+                </div>
+                <div class="choice">
+                    <input type="checkbox" id="levels" name="improve" value="levels">
+                    <label for="levels">Level design</label>
+                </div>
+            </fieldset>
+
+            <div class="field">
+                <label for="comments">Anything else?</label>
+                <textarea id="comments" name="comments" placeholder="Bugs, ideas, or a moment that made you smile"></textarea>
+            </div>
+
+            <button id="submit" type="submit">Send feedback</button>
+        </form>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('includes/header.html')
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById('header-placeholder').innerHTML = html;
+            });
+    </script>
+
+    <script>
+        fetch('includes/footer.html')
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+            });
+    </script>
 </body>
-
-
 </html>

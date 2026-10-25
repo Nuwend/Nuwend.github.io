@@ -1,0 +1,113 @@
+#inventory {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    border-collapse: collapse;
+    border: 2px solid rgb(107, 10, 44);
+    background-color: rgb(255, 246, 255);
+    color: rgb(36, 28, 28);
+    font-family: 'Fira Code', monospace;
+}
+
+#inventory caption {
+    padding-bottom: 14px;
+    color: rgb(107, 10, 44);
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#inventory thead tr {
+    background-color: rgb(107, 10, 44);
+    color: white;
+}
+
+#inventory th {
+    padding: 14px 16px;
+    text-align: left;
+    font-weight: 700;
+}
+
+#inventory td {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgb(230, 200, 220);
+}
+
+/* Story 9: every span is inline-block */
+#inventory span {
+    display: inline-block;
+}
+
+/* Story 8: row-level background gradients, targeted with attribute selectors */
+#inventory tr[class="read"] {
+    background-image: linear-gradient(to right, #fff8ea, #fef0d0);
+}
+
+#inventory tr[class="to-read"] {
+    background-image: linear-gradient(to right, #f2f7ee, #e2edd6);
+}
+
+#inventory tr[class="in-progress"] {
+    background-image: linear-gradient(to right, #eef3f7, #dbe6ee);
+}
+
+/* Story 10, 11, 12: status badges per row type */
+#inventory tr[class="to-read"] span[class="status"] {
+    border: 1px solid #7a9b6b;
+    background-image: linear-gradient(to bottom, #e5efdd, #cfe1c1);
+    color: #3f5c33;
+}
+
+#inventory tr[class="read"] span[class="status"] {
+    border: 1px solid #c9a24b;
+    background-image: linear-gradient(to bottom, #fbecc4, #f1d68f);
+    color: #7a5a12;
+}
+
+#inventory tr[class="in-progress"] span[class="status"] {
+    border: 1px solid #6f93b3;
+    background-image: linear-gradient(to bottom, #dce8f2, #b9d0e4);
+    color: #2f4c66;
+}
+
+/* Story 13: shared sizing for status badges and rate wrappers */
+#inventory span[class="status"],
+#inventory span[class^="rate"] {
+    height: 1.7rem;
+    width: auto;
+    padding: 0.2rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    vertical-align: middle;
+}
+
+#inventory span[class^="rate"] {
+    padding: 0.3rem 0.5rem;
+    background-color: rgb(253, 227, 255);
+    border: 1px solid rgb(107, 10, 44);
+}
+
+/* Story 14: the three empty dots inside each rate span */
+#inventory span[class^="rate"] > span {
+    border: 1px solid #c9a24b;
+    border-radius: 50%;
+    margin: 0 2px;
+    height: 0.7rem;
+    width: 0.7rem;
+    background-color: white;
+}
+
+/* Story 15: one filled dot for a "one" rating */
+#inventory span[class~="one"] > span:first-child {
+    background-image: linear-gradient(to bottom right, #f4c95d, #c9862c);
+}
+
+/* Story 16: first two filled dots for a "two" rating */
+#inventory span[class~="two"] > span:nth-child(-n+2) {
+    background-image: linear-gradient(to bottom right, #f4c95d, #c9862c);
+}
+
+/* Story 17: all three filled dots for a "three" rating */
+#inventory span[class~="three"] > span {
+    background-image: linear-gradient(to bottom right, #f4c95d, #c9862c);
+}
