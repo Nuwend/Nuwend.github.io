@@ -39,7 +39,7 @@ footer {
 ul{
     margin-left: 25%;
     margin-right: 25%;
-    font-family: 'times new roman', serif;
+    font-family: 'Fira Code', monospace;
 }
 a:link {
   color: #7e009e;        /* unvisited links */
@@ -233,4 +233,9 @@ h4 {
             .related-content {
                 flex-direction: column;
             }
+        }
+.title {
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
