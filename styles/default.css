@@ -26,6 +26,11 @@ h3 {
     text-align: center;
     font-family: 'Fira Code', monospace;
 }
+h4 {
+    color: rgb(107, 10, 44);
+    margin-left: 25%;
+    font-family: 'Fira Code', monospace;
+}
 p {
     margin-left: 25%;
     margin-right: 25%;
@@ -61,11 +66,6 @@ a:active {
   src: url("fonts/Monimer-Serif.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-}
-h4 {
-    color: rgb(107, 10, 44);
-    text-align: center;
-    font-family: 'Fira Code', monospace;
 }
 
 #survey-form {
@@ -242,3 +242,46 @@ h4 {
             align-items: center;
             gap: 20px;
         }
+
+nav p {
+    margin: 1em auto;
+    text-align: center;
+    color: rgb(107, 10, 44);
+    font-weight: 700;
+}
+
+nav p:first-child {
+    font-size: 1.17em;
+}
+
+#pictures article {
+    margin: 30px 0;
+}
+
+#pictures figure {
+    margin: 20px;
+    text-align: center;
+}
+
+#pictures img {
+    display: block;
+    margin: 0 auto;
+}
+
+#pictures figcaption {
+    max-width: 400px;
+    margin: 8px auto 0 auto;
+    font-size: 14px;
+}
+
+#pictures article p a {
+    margin: 0 10px;
+}
+
+#pictures .image-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+}
