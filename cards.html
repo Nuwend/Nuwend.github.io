@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Musa | ITIS 3135 | Gallery</title>
+    <title>Muhammad Musa | ITIS 3135 | Cards</title>
     <link rel="stylesheet" href="styles/default.css">
     <link rel="icon" type="image/png" href="images/stupidthing.png">
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
@@ -51,6 +51,8 @@
             .then((response) => response.text())
             .then((html) => {
                 document.getElementById('header-placeholder').innerHTML = html;
+                const pageName = document.title.split('|').pop().trim();
+                document.querySelector('#header-placeholder h1').textContent += ' | ' + pageName;
             });
     </script>
 

@@ -186,6 +186,8 @@
             .then((response) => response.text())
             .then((html) => {
                 document.getElementById('header-placeholder').innerHTML = html;
+                const pageName = document.title.split('|').pop().trim();
+                document.querySelector('#header-placeholder h1').textContent += ' | ' + pageName;
             });
     </script>
 
