@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Musa | ITIS 3135 | Introduction</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/default.css">
+</head>
+
+<body>
+    <header id="header-placeholder"></header>
+
+    <main id="introduction">
+        <h2>Introduction</h2>
+        <h3>Muhammad Musa ~ Malicious Mammoth</h3>
+
+        <figure>
+            <img src="images/me-lol.png" alt="A photo of me at Water Bean">
+            <figcaption>Chilling at Water Bean</figcaption>
+        </figure>
+
+        <p>Hi, my name is Muhammad. I’m a computer science major (though technically I’m currently marked as “Undecided”). I’ve been playing the Yu-Gi-Oh TCG a bit recently and I’ve started going to the gym again.</p>
+
+        <ul>
+            <li><strong>Personal Background:</strong> Born in Charlotte but my family is from Palestine.</li>
+            <li><strong>Professional Background:</strong> Currently working part time at Panera.</li>
+            <li><strong>Academic Background:</strong> Computer Science 2028</li>
+            <li><strong>Primary Work Computer:</strong> MSI Gaming laptop Windows 11</li>
+            <li><strong>Primary Work Location:</strong> On campus, typically in the student union</li>
+            <li><strong>Alternate Work Computer/Location:</strong> Home/Custom PC: Ryzen 5 3600 &amp; RTX 3060</li>
+            <li><strong>Courses I’m Taking and Why:</strong>
+                <ol type="a">
+                    <li><strong>ITIS3135 - Frontend web app dev:</strong> Course requirement.</li>
+                    <li><strong>ITSC2181 - Intro to Computer Systems:</strong> Course requirement.</li>
+                    <li><strong>ITSC3160 - Database design and Implementation:</strong> Course requirement.</li>
+                    <li><strong>Math2164 - Matrices &amp; linear algebra:</strong> Course requirement.</li>
+                </ol>
+            </li>
+        </ul>
+
+        <figure>
+            <blockquote>
+                <p>“I burn my life to make a sunrise that I know I’ll never see.”</p>
+            </blockquote>
+            <figcaption>Luthen Rael, Andor ep 10</figcaption>
+        </figure>
+
+        <p id="profile-links">
+            <a href="https://webpages.charlotte.edu/mmusa2/">CLT Web</a> <span aria-hidden="true">|</span>
+            <a href="https://nuwend.github.io/">GitHub.io</a> <span aria-hidden="true">|</span>
+            <a href="https://github.com/">GitHub</a> <span aria-hidden="true">|</span>
+            <a href="https://www.freecodecamp.org/">freeCodeCamp</a> <span aria-hidden="true">|</span>
+            <a href="https://www.codecademy.com/">Codecademy</a> <span aria-hidden="true">|</span>
+            <a href="https://www.linkedin.com/">LinkedIn</a>
+        </p>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('/includes/header.html')
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById('header-placeholder').innerHTML = html;
+                const pageName = document.title.split('|').pop().trim();
+                document.querySelector('#header-placeholder h1').textContent += ' | ' + pageName;
+            });
+    </script>
+
+    <script>
+        fetch('/includes/footer.html')
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+            });
+    </script>
+</body>
+</html>

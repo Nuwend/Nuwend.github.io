@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Musa | ITIS 3135 | Introduction Form</title>
+    <link rel="stylesheet" href="/styles/default.css">
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header-placeholder"></header>
+
+    <main id="introduction">
+        <h2>Introduction Form</h2>
+        <h3>Please submit the form below.</h3>
+
+        <form id="form">
+            <fieldset>
+                <legend>Name</legend>
+                <label>First Name
+                    <input type="text" id="firstName" name="firstName" value="Muhammad" placeholder="First name" required>
+                </label>
+                <label>Middle Name or Initial <span class="hint">(optional)</span>
+                    <input type="text" id="middleName" name="middleName" placeholder="Middle name or initial">
+                </label>
+                <label>Nickname or Preferred Name <span class="hint">(optional)</span>
+                    <input type="text" id="nickname" name="nickname" placeholder="Nickname or preferred name">
+                </label>
+                <label>Last Name
+                    <input type="text" id="lastName" name="lastName" value="Musa" placeholder="Last name" required>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Acknowledgment</legend>
+                <label>Acknowledgment Statement
+                    <textarea id="acknowledgment" name="acknowledgment" placeholder="Write your acknowledgment statement" required></textarea>
+                </label>
+                <label>Acknowledgment Date
+                    <input type="date" id="acknowledgmentDate" name="acknowledgmentDate" required>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Mascot</legend>
+                <label>Mascot Adjective
+                    <input type="text" id="adjectives" name="adjectives" placeholder="For example, Terrific" required>
+                </label>
+                <label>Mascot Animal
+                    <input type="text" id="animal" name="animal" placeholder="For example, Muskrat" required>
+                </label>
+                <label>Divider
+                    <input type="text" id="prettyNameDivider" name="prettyNameDivider" value="~" placeholder="For example, ~ or |" required>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Picture</legend>
+                <img id="preview" src="../images/muhammad-for-introduction.jpg" alt="Preview of the picture that will be shown">
+                <label>Upload a Picture <span class="hint">(leave empty to use my default photo)</span>
+                    <input type="file" id="img" name="img" accept="image/*">
+                </label>
+                <label>Picture Description for Screen Readers
+                    <input type="text" id="pictureAlt" name="pictureAlt" value="A photo of me at Water Bean" placeholder="Describe the picture" required>
+                </label>
+                <label>Picture Caption
+                    <input type="text" id="caption" name="caption" value="Chilling at Water Bean" placeholder="Caption for the picture" required>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>About Me</legend>
+                <label>Personal Statement
+                    <textarea id="statement" name="statement" placeholder="A short statement about yourself" required>Hi, my name is Muhammad. I’m a computer science major (though technically I’m currently marked as “Undecided”). I’ve been playing the Yu-Gi-Oh TCG a bit recently and I’ve started going to the gym again.</textarea>
+                </label>
+                <label>Personal Background
+                    <textarea id="personalBackground" name="personalBackground" placeholder="Where you are from and your background" required>Born in Charlotte but my family is from Palestine.</textarea>
+                </label>
+                <label>Professional Background
+                    <textarea id="professionalBackground" name="professionalBackground" placeholder="Your work experience" required>Currently working part time at Panera.</textarea>
+                </label>
+                <label>Academic Background
+                    <textarea id="academicBackground" name="academicBackground" placeholder="Your major and school history" required>Computer Science 2028</textarea>
+                </label>
+                <label>Primary Work Computer
+                    <textarea id="primaryWorkComputer" name="primaryWorkComputer" placeholder="The computer you work on most" required>MSI Gaming laptop Windows 11</textarea>
+                </label>
+                <label>Primary Work Location
+                    <textarea id="primaryWorkLocation" name="primaryWorkLocation" placeholder="Where you usually work" required>On campus, typically in the student union</textarea>
+                </label>
+                <label>Alternate Work Computer and Location
+                    <textarea id="alternateComputerLocation" name="alternateComputerLocation" placeholder="Your backup computer and where you use it" required>Home/Custom PC: Ryzen 5 3600 &amp; RTX 3060</textarea>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Courses I’m Taking and Why</legend>
+                <div id="courses">
+                    <div class="course">
+                        <input type="text" name="department" value="ITIS" placeholder="Department" aria-label="Department" required>
+                        <input type="text" name="courseNumber" value="3135" placeholder="Number" aria-label="Course number" required>
+                        <input type="text" name="courseTitle" value="Frontend web app dev" placeholder="Course name" aria-label="Course name" required>
+                        <input type="text" name="reasonForTaking" value="Course requirement." placeholder="Reason for taking it" aria-label="Reason for taking the course" required>
+                    </div>
+                    <div class="course">
+                        <input type="text" name="department" value="ITSC" placeholder="Department" aria-label="Department" required>
+                        <input type="text" name="courseNumber" value="2181" placeholder="Number" aria-label="Course number" required>
+                        <input type="text" name="courseTitle" value="Intro to Computer Systems" placeholder="Course name" aria-label="Course name" required>
+                        <input type="text" name="reasonForTaking" value="Course requirement." placeholder="Reason for taking it" aria-label="Reason for taking the course" required>
+                    </div>
+                    <div class="course">
+                        <input type="text" name="department" value="ITSC" placeholder="Department" aria-label="Department" required>
+                        <input type="text" name="courseNumber" value="3160" placeholder="Number" aria-label="Course number" required>
+                        <input type="text" name="courseTitle" value="Database design and Implementation" placeholder="Course name" aria-label="Course name" required>
+                        <input type="text" name="reasonForTaking" value="Course requirement." placeholder="Reason for taking it" aria-label="Reason for taking the course" required>
+                    </div>
+                    <div class="course">
+                        <input type="text" name="department" value="Math" placeholder="Department" aria-label="Department" required>
+                        <input type="text" name="courseNumber" value="2164" placeholder="Number" aria-label="Course number" required>
+                        <input type="text" name="courseTitle" value="Matrices &amp; linear algebra" placeholder="Course name" aria-label="Course name" required>
+                        <input type="text" name="reasonForTaking" value="Course requirement." placeholder="Reason for taking it" aria-label="Reason for taking the course" required>
+                    </div>
+                </div>
+                <button type="button" id="add-course">Add Course</button>
+            </fieldset>
+
+            <fieldset>
+                <legend>Quote</legend>
+                <label>Quote
+                    <textarea id="quote" name="quote" placeholder="A quote you like" required>“I burn my life to make a sunrise that I know I’ll never see.”</textarea>
+                </label>
+                <label>Quote Author
+                    <input type="text" id="quoteAuthor" name="quoteAuthor" value="Luthen Rael, Andor ep 10" placeholder="Who said it" required>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Extras</legend>
+                <label>Funny Thing <span class="hint">(optional)</span>
+                    <input type="text" id="funnyItem" name="funnyItem" placeholder="Something funny about you">
+                </label>
+                <label>Something I Would Like to Share <span class="hint">(optional)</span>
+                    <input type="text" id="somethingToShare" name="somethingToShare" placeholder="Anything else you want to share">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Links</legend>
+                <div class="link-row">
+                    <input type="text" name="linkLabel" value="CLT Web" placeholder="Link name" aria-label="Link 1 name" required>
+                    <input type="url" name="linkUrl" value="https://webpages.charlotte.edu/mmusa2/" placeholder="https://" aria-label="Link 1 address" required>
+                </div>
+                <div class="link-row">
+                    <input type="text" name="linkLabel" value="GitHub.io" placeholder="Link name" aria-label="Link 2 name" required>
+                    <input type="url" name="linkUrl" value="https://nuwend.github.io/" placeholder="https://" aria-label="Link 2 address" required>
+                </div>
+                <div class="link-row">
+                    <input type="text" name="linkLabel" value="GitHub" placeholder="Link name" aria-label="Link 3 name" required>
+                    <input type="url" name="linkUrl" value="https://github.com/" placeholder="https://" aria-label="Link 3 address" required>
+                </div>
+                <div class="link-row">
+                    <input type="text" name="linkLabel" value="freeCodeCamp" placeholder="Link name" aria-label="Link 4 name" required>
+                    <input type="url" name="linkUrl" value="https://www.freecodecamp.org/" placeholder="https://" aria-label="Link 4 address" required>
+                </div>
+                <div class="link-row">
+                    <input type="text" name="linkLabel" value="Codecademy" placeholder="Link name" aria-label="Link 5 name" required>
+                    <input type="url" name="linkUrl" value="https://www.codecademy.com/" placeholder="https://" aria-label="Link 5 address" required>
+                </div>
+                <div class="link-row">
+                    <input type="text" name="linkLabel" value="LinkedIn" placeholder="Link name" aria-label="Link 6 name" required>
+                    <input type="url" name="linkUrl" value="https://www.linkedin.com/" placeholder="https://" aria-label="Link 6 address" required>
+                </div>
+            </fieldset>
+
+            <div id="buttons">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <button type="button" id="clear">Clear</button>
+            </div>
+        </form>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // The header and footer links are written for the main folder, so this page adds ../ to them.
+        function fixLinks(container) {
+            container.querySelectorAll('a').forEach((link) => {
+                const href = link.getAttribute('href');
+                if (!href.startsWith('http') && !href.startsWith('#')) {
+                    link.setAttribute('href', '../' + href);
+                }
+            });
+        }
+
+        fetch('/includes/header.html')
+            .then((response) => response.text())
+            .then((html) => {
+                const header = document.getElementById('header-placeholder');
+                header.innerHTML = html;
+                fixLinks(header);
+                const pageName = document.title.split('|').pop().trim();
+                header.querySelector('h1').textContent += ' | ' + pageName;
+            });
+
+        fetch('/includes/footer.html')
+            .then((response) => response.text())
+            .then((html) => {
+                const footer = document.getElementById('footer-placeholder');
+                footer.innerHTML = html;
+                fixLinks(footer);
+            });
+    </script>
+
+    <script src="/scripts/introduction.js"></script>
+</body>
+</html>

@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Musa | ITIS 3135 | Front End Web Development | Everything Pictures</title>
-    <link rel="icon" type="image/png" href="images/stupidthing.png">
+    <link rel="icon" type="image/png" href="/images/stupidthing.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="/styles/default.css">
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
@@ -27,7 +27,7 @@
 
             <figure>
                 <!-- Intentionally oversized: this article demonstrates resizing the original with CSS only -->
-                <img src="images/cat-on-stone-wall-35617550@fotovegraf_pexels-400x600.jpg" alt="A white and gray cat sitting on a stone wall" style="width: 400px; height: 600px;">
+                <img src="/images/cat-on-stone-wall-35617550@fotovegraf_pexels-400x600.jpg" alt="A white and gray cat sitting on a stone wall" style="width: 400px; height: 600px;">
                 <figcaption>The photo reduced to 400 by 600 pixels so it loads quickly in a browser.</figcaption>
             </figure>
 
@@ -35,10 +35,10 @@
                 <h4>Original Image</h4>
                 <p>
                     Click to open the image in its original JPG format:
-                    <a href="images/cat-on-stone-wall-35617550@fotovegraf_pexels.jpg" target="_blank" rel="noopener">Original</a>
-                    <a href="images/cat-on-stone-wall-35617550@fotovegraf_pexels.gif" target="_blank" rel="noopener">Original as a GIF</a>
-                    <a href="images/cat-on-stone-wall-35617550@fotovegraf_pexels-greyscale.jpg" target="_blank" rel="noopener">Greyscale</a>
-                    <a href="images/cat-on-stone-wall-35617550@fotovegraf_pexels-bw.jpg" target="_blank" rel="noopener">Black and White</a>
+                    <a href="/images/cat-on-stone-wall-35617550@fotovegraf_pexels.jpg" target="_blank" rel="noopener">Original</a>
+                    <a href="/images/cat-on-stone-wall-35617550@fotovegraf_pexels.gif" target="_blank" rel="noopener">Original as a GIF</a>
+                    <a href="/images/cat-on-stone-wall-35617550@fotovegraf_pexels-greyscale.jpg" target="_blank" rel="noopener">Greyscale</a>
+                    <a href="/images/cat-on-stone-wall-35617550@fotovegraf_pexels-bw.jpg" target="_blank" rel="noopener">Black and White</a>
                 </p>
             </article>
 
@@ -46,7 +46,7 @@
                 <h4>Downsizing Images with CSS</h4>
                 <p>Here the original file is shown at 400 pixels wide using inline CSS. The browser still downloads the whole file, so the page pays for every pixel it hides.</p>
              <figure>
-                    <img src="images/cat-on-stone-wall-35617550@fotovegraf_pexels.jpg" alt="A white and gray cat sitting on a stone wall" style="width: 400px; height: auto;">
+                    <img src="/images/cat-on-stone-wall-35617550@fotovegraf_pexels.jpg" alt="A white and gray cat sitting on a stone wall" style="width: 400px; height: auto;">
                     <figcaption>The 3448 by 5168 original shrunk by CSS alone. It looks fine, but the file is still 1.24 MB.</figcaption>
                 </figure>
             </article>
@@ -55,7 +55,7 @@
                 <h4>Proper Reduction of Image with Editor</h4>
                 <p>This copy was resized to 400 by 600 pixels in an image editor, so the file itself is small. I still set its size in CSS so the browser reserves the space while it loads.</p>
                 <figure>
-                    <img src="images/cat-on-stone-wall-35617550@fotovegraf_pexels-400x600.jpg" alt="A white and gray cat sitting on a stone wall" style="width: 400px; height: 600px;">
+                    <img src="/images/cat-on-stone-wall-35617550@fotovegraf_pexels-400x600.jpg" alt="A white and gray cat sitting on a stone wall" style="width: 400px; height: 600px;">
                     <figcaption>The same photo resized in an editor, now only 73.3 KB.</figcaption>
                 </figure>
             </article>
@@ -65,19 +65,19 @@
                 <p>Each of these keeps one dimension of the 400 by 600 version and shrinks the other by 33%, then by 33% again. The first two are squashed flat and the last two are squeezed thin.</p>
                 <div class="image-row">
                     <figure>
-                        <img src="images/cat-on-stone-wall-35617550@fotovegraf_pexels-400x402.jpg" alt="The cat photo squashed flat" style="width: 400px; height: 402px;">
+                        <img src="/images/cat-on-stone-wall-35617550@fotovegraf_pexels-400x402.jpg" alt="The cat photo squashed flat" style="width: 400px; height: 402px;">
                         <figcaption>Width kept at 400, height cut to 402.</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/cat-on-stone-wall-35617550@fotovegraf_pexels-400x269.jpg" alt="The cat photo squashed even flatter" style="width: 400px; height: 269px;">
+                        <img src="/images/cat-on-stone-wall-35617550@fotovegraf_pexels-400x269.jpg" alt="The cat photo squashed even flatter" style="width: 400px; height: 269px;">
                         <figcaption>Width kept at 400, height cut again to 269.</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/cat-on-stone-wall-35617550@fotovegraf_pexels-268x600.jpg" alt="The cat photo squeezed narrow" style="width: 268px; height: 600px;">
+                        <img src="/images/cat-on-stone-wall-35617550@fotovegraf_pexels-268x600.jpg" alt="The cat photo squeezed narrow" style="width: 268px; height: 600px;">
                         <figcaption>Height kept at 600, width cut to 268.</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/cat-on-stone-wall-35617550@fotovegraf_pexels-180x600.jpg" alt="The cat photo squeezed even narrower" style="width: 180px; height: 600px;">
+                        <img src="/images/cat-on-stone-wall-35617550@fotovegraf_pexels-180x600.jpg" alt="The cat photo squeezed even narrower" style="width: 180px; height: 600px;">
                         <figcaption>Height kept at 600, width cut again to 180.</figcaption>
                     </figure>
                 </div>
@@ -88,11 +88,11 @@
                 <p>Both images below use the same CSS size of 300 by 450 pixels. The one on the right was only 100 by 150 pixels to begin with, so the browser has to invent pixels to stretch it.</p>
                 <div class="image-row">
                     <figure>
-                        <img src="images/cat-on-stone-wall-35617550@fotovegraf_pexels-400x600.jpg" alt="The cat photo displayed sharply" style="width: 300px; height: 450px;">
+                        <img src="/images/cat-on-stone-wall-35617550@fotovegraf_pexels-400x600.jpg" alt="The cat photo displayed sharply" style="width: 300px; height: 450px;">
                 <figcaption>The 400 by 600 version shown at 300 by 450. It stays sharp.</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/cat-on-stone-wall-35617550@fotovegraf_pexels-100x150.jpg" alt="The cat photo displayed blurry" style="width: 300px; height: 450px;">
+                        <img src="/images/cat-on-stone-wall-35617550@fotovegraf_pexels-100x150.jpg" alt="The cat photo displayed blurry" style="width: 300px; height: 450px;">
                         <figcaption>The 100 by 150 version stretched to 300 by 450. It looks blurry.</figcaption>
                     </figure>
              </div>
@@ -106,7 +106,7 @@
             <p>I took this photo myself with my phone. I chose a plate because it is perfectly round, which makes it easy to see when an image has been stretched out of proportion. [Describe the photo and why you set it up this way.] The original is a JPG that is 3024 by 4032 pixels and 1.57 MB.</p>
 
             <figure>
-                <img src="images/hand-and-plate@mmusa2-360x480.jpg" alt="A hand next to a round plate" style="width: 360px; height: 480px;">
+                <img src="/images/hand-and-plate@mmusa2-360x480.jpg" alt="A hand next to a round plate" style="width: 360px; height: 480px;">
                 <figcaption>The photo reduced to 360 by 480 pixels so it loads quickly in a browser.</figcaption>
             </figure>
 
@@ -114,10 +114,10 @@
                 <h4>Original Image</h4>
                 <p>
                     Click to open the image in its original JPG format:
-                    <a href="images/hand-and-plate@mmusa2.jpg" target="_blank" rel="noopener">Original</a>
-                    <a href="images/hand-and-plate@mmusa2.gif" target="_blank" rel="noopener">Original as a GIF</a>
-                    <a href="images/hand-and-plate@mmusa2-greyscale.jpg" target="_blank" rel="noopener">Greyscale</a>
-                    <a href="images/hand-and-plate@mmusa2-bw.jpg" target="_blank" rel="noopener">Black and White</a>
+                    <a href="/images/hand-and-plate@mmusa2.jpg" target="_blank" rel="noopener">Original</a>
+                    <a href="/images/hand-and-plate@mmusa2.gif" target="_blank" rel="noopener">Original as a GIF</a>
+                    <a href="/images/hand-and-plate@mmusa2-greyscale.jpg" target="_blank" rel="noopener">Greyscale</a>
+                    <a href="/images/hand-and-plate@mmusa2-bw.jpg" target="_blank" rel="noopener">Black and White</a>
                 </p>
             </article>
 
@@ -125,7 +125,7 @@
                 <h4>Downsizing Images with CSS</h4>
                 <p>Here the original file is shown at 360 pixels wide using inline CSS. The browser still downloads the whole file, so the page pays for every pixel it hides.</p>
                 <figure>
-                    <img src="images/hand-and-plate@mmusa2.jpg" alt="A hand next to a round plate" style="width: 360px; height: auto;">
+                    <img src="/images/hand-and-plate@mmusa2.jpg" alt="A hand next to a round plate" style="width: 360px; height: auto;">
                     <figcaption>The 3024 by 4032 original shrunk by CSS alone. It looks fine, but the file is still 1.57 MB.</figcaption>
                 </figure>
             </article>
@@ -134,7 +134,7 @@
                 <h4>Proper Reduction of Image with Editor</h4>
                 <p>This copy was resized to 360 by 480 pixels in an image editor, so the file itself is small. I still set its size in CSS so the browser reserves the space while it loads.</p>
                 <figure>
-                    <img src="images/hand-and-plate@mmusa2-360x480.jpg" alt="A hand next to a round plate" style="width: 360px; height: 480px;">
+                    <img src="/images/hand-and-plate@mmusa2-360x480.jpg" alt="A hand next to a round plate" style="width: 360px; height: 480px;">
                     <figcaption>The same photo resized in an editor, now only 41.7 KB.</figcaption>
                 </figure>
             </article>
@@ -144,19 +144,19 @@
                 <p>Each of these keeps one dimension of the 360 by 480 version and shrinks the other by 33%, then by 33% again. The plate is no longer round in any of them, which makes the distortion easy to spot.</p>
                 <div class="image-row">
                     <figure>
-                        <img src="images/hand-and-plate@mmusa2-360x322.jpg" alt="The hand and plate photo squashed flat" style="width: 360px; height: 322px;">
+                        <img src="/images/hand-and-plate@mmusa2-360x322.jpg" alt="The hand and plate photo squashed flat" style="width: 360px; height: 322px;">
                         <figcaption>Width kept at 360, height cut to 322.</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/hand-and-plate@mmusa2-360x216.jpg" alt="The hand and plate photo squashed even flatter" style="width: 360px; height: 216px;">
+                        <img src="/images/hand-and-plate@mmusa2-360x216.jpg" alt="The hand and plate photo squashed even flatter" style="width: 360px; height: 216px;">
                         <figcaption>Width kept at 360, height cut again to 216.</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/hand-and-plate@mmusa2-241x480.jpg" alt="The hand and plate photo squeezed narrow" style="width: 241px; height: 480px;">
+                        <img src="/images/hand-and-plate@mmusa2-241x480.jpg" alt="The hand and plate photo squeezed narrow" style="width: 241px; height: 480px;">
                         <figcaption>Height kept at 480, width cut to 241.</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/hand-and-plate@mmusa2-161x480.jpg" alt="The hand and plate photo squeezed even narrower" style="width: 161px; height: 480px;">
+                        <img src="/images/hand-and-plate@mmusa2-161x480.jpg" alt="The hand and plate photo squeezed even narrower" style="width: 161px; height: 480px;">
                         <figcaption>Height kept at 480, width cut again to 161.</figcaption>
                     </figure>
                 </div>
@@ -167,11 +167,11 @@
                 <p>Both images below use the same CSS size of 270 by 360 pixels. The one on the right was only 90 by 120 pixels to begin with, so the browser has to invent pixels to stretch it.</p>
                 <div class="image-row">
                     <figure>
-                        <img src="images/hand-and-plate@mmusa2-360x480.jpg" alt="The hand and plate photo displayed sharply" style="width: 270px; height: 360px;">
+                        <img src="/images/hand-and-plate@mmusa2-360x480.jpg" alt="The hand and plate photo displayed sharply" style="width: 270px; height: 360px;">
                         <figcaption>The 360 by 480 version shown at 270 by 360. It stays sharp.</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/hand-and-plate@mmusa2-90x120.jpg" alt="The hand and plate photo displayed blurry" style="width: 270px; height: 360px;">
+                        <img src="/images/hand-and-plate@mmusa2-90x120.jpg" alt="The hand and plate photo displayed blurry" style="width: 270px; height: 360px;">
                         <figcaption>The 90 by 120 version stretched to 270 by 360. It looks blurry.</figcaption>
                     </figure>
                 </div>
@@ -182,7 +182,7 @@
     <div id="footer-placeholder"></div>
 
     <script>
-        fetch('includes/header.html')
+        fetch('/includes/header.html')
             .then((response) => response.text())
             .then((html) => {
                 document.getElementById('header-placeholder').innerHTML = html;
@@ -192,7 +192,7 @@
     </script>
 
     <script>
-        fetch('includes/footer.html')
+        fetch('/includes/footer.html')
             .then((response) => response.text())
             .then((html) => {
                 document.getElementById('footer-placeholder').innerHTML = html;

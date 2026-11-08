@@ -3,27 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Musa | ITIS 3135 | Contract</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Muhammad Musa | ITIS 3135 | Front end Web Development | About Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/default.css">
+    <link rel="icon" type="image/png" href="images/stupidthing.png">
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-</head>
+</head> 
+
 <body>
-    <h1>Muhammad Musa | ITIS 3135 | Front end Web Development</h1>
+    <header>
+        <h1>Muhammad Musa | ITIS 3135 | Front end Web Development</h1>
+    </header>
+    <main>
+    <h2>About me:</h2>
+    <p>
+        Hello, My name is Muhammad Musa. I am currently studying cyber security. I like to pass the time by playing video games and riding my bike.
+    </p>
     <hr>
-    <h3>
-        <a href="../home.html">Home</a> || <a href="../introduction.html">Introduction</a> || <a href="itis3135/">Contract</a> || <a href="../about.html">About</a>
-    </h3>
-    <h1>ITIS 3135 Contract</h1>
-    <p>I, Muhammad Musa, agree to abide by the terms of the course contract in my Fall 2026 ITIS 3135, Front-End Web Application Development class with my instructor, Professor D.I. von Briesen.</p>
+    <p>
+        You can view my <a href="home.html"> ITIS 3135 course website</a>.
+    </p>
+    </main>
+    <div id="footer-placeholder"></div>
 
-    <p>I understand that all work that I do on publicly available online tools will be available to the world and will not put information there that is inappropriate for schoolwork, or that I wish to keep private. I also understand that it is my work that counts for attendance, not logins or showing up for class.</p>
+    <script>
+        fetch('/includes/footer.html')
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+            });
+    </script>
 
-    <p>As such, failure to turn in assignments may show as absences. I also understand that given the structure and content of this class it’s possible to find many examples online or even view my classmates’ code directly. I swear that I will only use these resources to learn and will not cut and paste code except where I have properly given credit and never from my classmates.</p>
-
-<p>Signed:
-<em><a href="../index.html">Muhammad Musa</a>, 09/06/2026</em></p>
-
-<script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 
 </body>
+
+
+
 </html>

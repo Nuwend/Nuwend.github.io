@@ -285,3 +285,145 @@ nav p:first-child {
     align-items: flex-end;
     gap: 10px;
 }
+
+#introduction figure {
+    margin: 20px auto;
+    text-align: center;
+}
+
+#introduction figure img {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+}
+
+#introduction figcaption {
+    margin-top: 8px;
+    font-style: italic;
+}
+
+#introduction blockquote {
+    margin: 0;
+}
+
+#introduction blockquote p {
+    text-align: center;
+}
+
+#profile-links {
+    margin: 30px 10% 40px 10%;
+    text-align: center;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin: 0 25% 40px 25%;
+    padding: 28px;
+    background-color: rgb(255, 246, 255);
+    color: rgb(36, 28, 28);
+    border: 3px solid rgb(107, 10, 44);
+    border-radius: 6px;
+    box-shadow: 8px 8px 0 rgb(107, 10, 44);
+    font-family: 'Fira Code', monospace;
+}
+
+#form fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 0;
+    padding: 16px;
+    border: 2px solid rgb(107, 10, 44);
+    border-radius: 4px;
+}
+
+#form legend {
+    padding: 0 8px;
+    color: rgb(107, 10, 44);
+    font-weight: 700;
+}
+
+#form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-weight: 700;
+}
+
+#form .hint {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+#form input[type="text"],
+#form input[type="url"],
+#form input[type="date"],
+#form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: rgb(36, 28, 28);
+    border: 2px solid rgb(107, 10, 44);
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 16px;
+}
+
+#form textarea {
+    min-height: 72px;
+    resize: vertical;
+}
+
+#form .course,
+#form .link-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#form .course input,
+#form .link-row input {
+    flex: 1 1 140px;
+    width: auto;
+}
+
+#form #preview {
+    width: 150px;
+    height: auto;
+}
+
+#form button {
+    padding: 12px 18px;
+    background-color: rgb(107, 10, 44);
+    color: white;
+    border: 3px solid rgb(107, 10, 44);
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#form button:hover {
+    background-color: white;
+    color: rgb(107, 10, 44);
+}
+
+#form input:focus,
+#form textarea:focus,
+#form button:focus {
+    outline: 3px solid #7e009e;
+    outline-offset: 2px;
+}
+
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
