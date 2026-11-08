@@ -58,7 +58,7 @@
 
             <fieldset>
                 <legend>Picture</legend>
-                <img id="preview" src="../images/muhammad-for-introduction.jpg" alt="Preview of the picture that will be shown">
+                <img id="preview" src="/images/me-lol.png" alt="Preview of the picture that will be shown">
                 <label>Upload a Picture <span class="hint">(leave empty to use my default photo)</span>
                     <input type="file" id="img" name="img" accept="image/*">
                 </label>
@@ -185,16 +185,6 @@
     <div id="footer-placeholder"></div>
 
     <script>
-        // The header and footer links are written for the main folder, so this page adds ../ to them.
-        function fixLinks(container) {
-            container.querySelectorAll('a').forEach((link) => {
-                const href = link.getAttribute('href');
-                if (!href.startsWith('http') && !href.startsWith('#')) {
-                    link.setAttribute('href', '../' + href);
-                }
-            });
-        }
-
         fetch('/includes/header.html')
             .then((response) => response.text())
             .then((html) => {
