@@ -96,10 +96,167 @@ function resetForm() {
     }, 0);
 }
 
+// Create an element and set its text safely, so visitor text never becomes HTML.
+function make(tag, text) {
+    const element = document.createElement(tag);
+    if (text) {
+        element.textContent = text;
+    }
+    return element;
+}
+
+// A list item with a bold label followed by the visitor's text.
+function labeledItem(label, text) {
+    const item = make('li');
+    item.append(make('strong', label), ' ' + text);
+    return item;
+}
+
+// Collect the form into an object that uses the same keys as the data model.
+function gatherData() {
+    const value = (id) => document.getElementById(id).value.trim();
+
+    const courses = Array.from(coursesContainer.querySelectorAll('.course')).map((row) => ({
+        department: row.querySelector('[name="department"]').value.trim(),
+        courseNumber: row.querySelector('[name="courseNumber"]').value.trim(),
+        courseTitle: row.querySelector('[name="courseTitle"]').value.trim(),
+        reasonForTaking: row.querySelector('[name="reasonForTaking"]').value.trim()
+    }));
+
+    const labels = formElement.querySelectorAll('[name="linkLabel"]');
+    const urls = formElement.querySelectorAll('[name="linkUrl"]');
+    const footerLinks = Array.from(labels).map((input, index) => ({
+        label: input.value.trim(),
+        url: urls[index].value.trim()
+    }));
+
+    return {
+        firstName: value('firstName'),
+        middleName: value('middleName'),
+        nickname: value('nickname'),
+        lastName: value('lastName'),
+        acknowledgment: value('acknowledgment'),
+        acknowledgmentDate: value('acknowledgmentDate'),
+        prettyNameDivider: value('prettyNameDivider'),
+        adjectives: value('adjectives'),
+        animal: value('animal'),
+        img: uploadedUrl || defaultImage,
+        pictureAlt: value('pictureAlt'),
+        caption: value('caption'),
+        personalInfo: {
+            statement: value('statement'),
+            personalBackground: value('personalBackground'),
+            professionalBackground: value('professionalBackground'),
+            academicBackground: value('academicBackground'),
+            primaryWorkComputer: value('primaryWorkComputer'),
+            primaryWorkLocation: value('primaryWorkLocation'),
+            alternateComputerLocation: value('alternateComputerLocation')
+        },
+        courses: courses,
+        quote: value('quote'),
+        quoteAuthor: value('quoteAuthor'),
+        funnyItem: value('funnyItem'),
+        somethingToShare: value('somethingToShare'),
+        footerLinks: footerLinks
+    };
+}
+
+// Build the same markup as introduction.html, from the collected data.
+function buildResult(data) {
+    const info = data.personalInfo;
+
+    const nameParts = [
+        data.firstName,
+        data.middleName,
+        data.nickname ? '“' + data.nickname + '”' : '',
+        data.lastName
+    ].filter(Boolean);
+    const title = make('h3', nameParts.join(' ') + ' ' + data.prettyNameDivider + ' ' + data.adjectives + ' ' + data.animal);
+
+    const photo = make('figure');
+    const image = make('img');
+    image.src = data.img;
+    image.alt = data.pictureAlt;
+    photo.append(image, make('figcaption', data.caption));
+
+    const statement = make('p', info.statement);
+
+    const list = make('ul');
+    [
+        ['Personal Background:', info.personalBackground],
+        ['Professional Background:', info.professionalBackground],
+        ['Academic Background:', info.academicBackground],
+        ['Primary Work Computer:', info.primaryWorkComputer],
+        ['Primary Work Location:', info.primaryWorkLocation],
+        ['Alternate Work Computer/Location:', info.alternateComputerLocation]
+    ].forEach(([label, text]) => list.append(labeledItem(label, text)));
+
+    const coursesItem = make('li');
+    coursesItem.append(make('strong', 'Courses I’m Taking and Why:'));
+    const courseList = make('ol');
+    courseList.setAttribute('type', 'a');
+    data.courses.forEach((course) => {
+        courseList.append(labeledItem(
+            course.department + course.courseNumber + ' - ' + course.courseTitle + ':',
+            course.reasonForTaking
+        ));
+    });
+    coursesItem.append(courseList);
+    list.append(coursesItem);
+
+    if (data.funnyItem) {
+        list.append(labeledItem('Funny Thing:', data.funnyItem));
+    }
+    if (data.somethingToShare) {
+        list.append(labeledItem('Something I Would Like to Share:', data.somethingToShare));
+    }
+
+    // Show the quote inside curly quotation marks, whether or not the visitor typed any.
+    const quoteText = data.quote.replace(/^["“”]+|["“”]+$/g, '').trim();
+    const quoteFigure = make('figure');
+    const blockquote = make('blockquote');
+    blockquote.append(make('p', '“' + quoteText + '”'));
+    quoteFigure.append(blockquote, make('figcaption', data.quoteAuthor));
+
+    // Only web addresses become links.
+    const links = make('p');
+    links.id = 'profile-links';
+    data.footerLinks
+        .filter((link) => /^https?:\/\//i.test(link.url))
+        .forEach((link, index) => {
+            const anchor = make('a', link.label);
+            anchor.href = link.url;
+            if (index === 0) {
+                links.append(anchor);
+            } else {
+                const divider = make('span', '|');
+                divider.setAttribute('aria-hidden', 'true');
+                links.append(' ', divider, ' ', anchor);
+            }
+        });
+
+    // Loading the page again brings back the form with its default values.
+    const resetParagraph = make('p');
+    resetParagraph.id = 'reset-wrapper';
+    const resetLink = make('a', 'Reset the form');
+    resetLink.href = window.location.pathname;
+    resetParagraph.append(resetLink);
+
+    return [title, photo, statement, list, quoteFigure, links, resetParagraph];
+}
+
+// Replace the form with the result, keeping the Introduction Form heading.
+function showResult(data) {
+    const main = document.getElementById('introduction');
+    const heading = main.querySelector('h2');
+    main.replaceChildren(heading, ...buildResult(data));
+    window.scrollTo(0, 0);
+}
+
 formElement.addEventListener('submit', (event) => {
     event.preventDefault(); // prevents page refresh / default behavior
     if (validateForm()) {
-        console.log('Form is valid');
+        showResult(gatherData());
     }
 });
 

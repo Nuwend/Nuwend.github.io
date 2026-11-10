@@ -432,3 +432,8 @@ nav p:first-child {
     flex: 0 0 auto;
     padding: 8px 14px;
 }
+
+#reset-wrapper {
+    margin: 30px 10% 40px 10%;
+    text-align: center;
+}
