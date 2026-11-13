@@ -437,3 +437,27 @@ nav p:first-child {
     margin: 30px 10% 40px 10%;
     text-align: center;
 }
+
+#generated {
+    margin: 0 25% 40px 25%;
+}
+
+#generated label {
+    display: block;
+    margin: 24px 0 8px 0;
+    color: rgb(107, 10, 44);
+    font-weight: 700;
+}
+
+#generated textarea {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 320px;
+    padding: 12px;
+    background-color: white;
+    color: rgb(36, 28, 28);
+    border: 2px solid rgb(107, 10, 44);
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+}
