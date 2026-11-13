@@ -1,0 +1,79 @@
+{
+  "firstName": "Muhammad",
+  "middleName": "",
+  "nickname": "",
+  "lastName": "Musa",
+  "acknowledgment": "I understand that this is a public document, and I won’t put anything here that I wouldn’t want anyone to see",
+  "acknowledgmentDate": "2026-08-23",
+  "prettyNameDivider": "~",
+  "adjectives": "Malicious",
+  "animal": "Mammoth",
+  "img": "../images/me-lol.png",
+  "pictureAlt": "A photo of me at Water Bean",
+  "caption": "Chilling at Water Bean",
+  "personalInfo": {
+    "statement": "Hi, my name is Muhammad. I’m a computer science major (though technically I’m currently marked as “Undecided”). I’ve been playing the Yu-Gi-Oh TCG a bit recently and I’ve started going to the gym again.",
+    "personalBackground": "Born in Charlotte but my family is from Palestine.",
+    "professionalBackground": "Currently working part time at Panera.",
+    "academicBackground": "Computer Science 2028",
+    "primaryWorkComputer": "MSI Gaming laptop Windows 11",
+    "primaryWorkLocation": "On campus, typically in the student union",
+    "alternateComputerLocation": "Home/Custom PC: Ryzen 5 3600 & RTX 3060"
+  },
+  "courses": [
+    {
+      "department": "ITIS",
+      "courseNumber": "3135",
+      "courseTitle": "Frontend web app dev",
+      "reasonForTaking": "Course requirement."
+    },
+    {
+      "department": "ITSC",
+      "courseNumber": "2181",
+      "courseTitle": "Intro to Computer Systems",
+      "reasonForTaking": "Course requirement."
+    },
+    {
+      "department": "ITSC",
+      "courseNumber": "3160",
+      "courseTitle": "Database design and Implementation",
+      "reasonForTaking": "Course requirement."
+    },
+    {
+      "department": "Math",
+      "courseNumber": "2164",
+      "courseTitle": "Matrices & linear algebra",
+      "reasonForTaking": "Course requirement."
+    }
+  ],
+  "quote": "“I burn my life to make a sunrise that I know I’ll never see.”",
+  "quoteAuthor": "Luthen Rael, Andor ep 10",
+  "funnyItem": "",
+  "somethingToShare": "",
+  "footerLinks": [
+    {
+      "label": "CLT Web",
+      "url": "https://webpages.charlotte.edu/mmusa2/itis3135"
+    },
+    {
+      "label": "GitHub.io",
+      "url": "https://nuwend.github.io/itis3135"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/nuwend"
+    },
+    {
+      "label": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/nuwend"
+    },
+    {
+      "label": "Codecademy",
+      "url": "https://www.codecademy.com/profiles/Nuwend"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/"
+    }
+  ]
+}
