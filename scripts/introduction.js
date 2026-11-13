@@ -305,7 +305,30 @@ function getExportData() {
     const data = gatherData();
     const file = imageInput.files[0];
     data.img = file ? imagePrefix + file.name : defaultImage;
+
+    // Write the date as M/D/YY, like the data model.
+    const parts = data.acknowledgmentDate.split('-');
+    if (parts.length === 3) {
+        data.acknowledgmentDate = Number(parts[1]) + '/' + Number(parts[2]) + '/' + parts[0].slice(2);
+    }
     return data;
+}
+
+// Read a file as a base64 data URL.
+function blobToDataUrl(blob) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = () => reject(reader.error);
+        reader.readAsDataURL(blob);
+    });
+}
+
+// The chosen picture, or the default one, as a data URL.
+function pictureAsDataUrl() {
+    const file = imageInput.files[0];
+    const source = file ? Promise.resolve(file) : fetch(defaultImage).then((response) => response.blob());
+    return source.then(blobToDataUrl);
 }
 
 // Remove any quotation marks the visitor typed around the quote.
@@ -505,7 +528,17 @@ document.getElementById('generate-html').addEventListener('click', () => {
 });
 
 document.getElementById('generate-json').addEventListener('click', () => {
-    showOutput('json', 'Generated JSON', JSON.stringify(getExportData(), null, 2));
+    const data = getExportData();
+    pictureAsDataUrl()
+        .then((url) => {
+            data.img = url;
+        })
+        .catch(() => {
+            // If the picture can't be read, the file path stays in place.
+        })
+        .then(() => {
+            showOutput('json', 'Generated JSON', JSON.stringify(data, null, 2));
+        });
 });
 
 document.getElementById('generate-xml').addEventListener('click', () => {
