@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malicious Mammoth ❄ Dealers</title>
+    <link rel="stylesheet" href="styles/mammoth.css">
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header-placeholder"></header>
+
+    <main>
+        <h2>Dealers</h2>
+
+        <p>You can’t buy a Malicious Mammoth plow from a website, and we like it that way. Every plow is sold and fitted by a dealer who knows your local snow, so it leaves the lot properly mounted on your vehicle. Below you’ll find where to meet the herd and when to order it.</p>
+
+        <h3>Where to Find Us</h3>
+        <p>Our dealers are in the places where winter takes itself seriously. Each one carries the full herd, and the staff can measure your vehicle and fit the right plow while you wait.</p>
+
+        <table>
+            <caption>Malicious Mammoth dealers</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Dealer</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Northern Iron Equipment</th>
+                    <td>Buffalo, NY</td>
+                    <td>(555) 010-0142</td>
+                </tr>
+                <tr>
+                    <th scope="row">Gopher Ridge Supply</th>
+                    <td>Minneapolis, MN</td>
+                    <td>(555) 010-0187</td>
+                </tr>
+                <tr>
+                    <th scope="row">Front Range Heavy Gear</th>
+                    <td>Denver, CO</td>
+                    <td>(555) 010-0123</td>
+                </tr>
+                <tr>
+                    <th scope="row">Last Frontier Machinery</th>
+                    <td>Anchorage, AK</td>
+                    <td>(555) 010-0164</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <figure>
+            <img src="images/dealers-lot.jpg" alt="A dealer lot with orange plows lined up in the snow">
+            <figcaption>A dealer lot on the first snowy morning of the season.</figcaption>
+        </figure>
+
+        <h3>When to Order</h3>
+        <p>Snow doesn’t send a warning, so we run on a calendar. Order early and your plow will be on your vehicle before the first flake falls. Order late, and you’ll be plowing with a shovel.</p>
+
+        <table>
+            <caption>The Malicious Mammoth ordering season</caption>
+            <thead>
+                <tr>
+                    <th scope="col">When</th>
+                    <th scope="col">What Happens</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">August</th>
+                    <td>The order window opens, and dealers start taking reservations.</td>
+                </tr>
+                <tr>
+                    <th scope="row">September</th>
+                    <td>Fitting season. Bring your vehicle in to be measured for a mount.</td>
+                </tr>
+                <tr>
+                    <th scope="row">October</th>
+                    <td>The first plows ship, in time for the first frost.</td>
+                </tr>
+                <tr>
+                    <th scope="row">December 1</th>
+                    <td>The last day to order and be sure of delivery before the first big storm.</td>
+                </tr>
+                <tr>
+                    <th scope="row">March and April</th>
+                    <td>Off season. Dealers sharpen and service plows, and accept trade-ins.</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('includes/header.html')
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById('header-placeholder').innerHTML = html;
+                const pageName = document.title.split('❄').pop().trim();
+                document.querySelector('#header-placeholder h1').textContent += ' ❄ ' + pageName;
+            });
+    </script>
+
+    <script>
+        fetch('includes/footer.html')
+            .then((response) => response.text())
+            .then((html) => {
+                const footer = document.getElementById('footer-placeholder');
+                footer.innerHTML = html;
+                footer.querySelector('a[href^="https://wave.webaim.org"]').href = 'https://wave.webaim.org/report#/' + window.location.href;
+            });
+    </script>
+</html>

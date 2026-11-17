@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malicious Mammoth ❄ Plows</title>
+    <link rel="stylesheet" href="styles/mammoth.css">
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header-placeholder"></header>
+
+    <main>
+        <h2>Plows</h2>
+
+        <p>We make exactly four plows, and each one is named for a member of the herd. A small lineup means that every model gets our full attention, and you never have to wade through a catalogue to find the one that fits your vehicle. Here’s the whole herd at a glance.</p>
+        <p>All four share the same curved tusk blade, thick steel, and safety orange paint. What changes is the size, so choose by what you drive.</p>
+
+        <figure>
+            <img src="images/plows-herd.jpg" alt="All four Malicious Mammoth plows lined up side by side in the snow">
+            <figcaption>The full herd, smallest to largest.</figcaption>
+        </figure>
+
+        <table>
+            <caption>The Malicious Mammoth herd at a glance</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Plow</th>
+                    <th scope="col">Fits</th>
+                    <th scope="col">Blade Width</th>
+                    <th scope="col">Weight</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">The Calf</th>
+                    <td>ATVs and garden tractors</td>
+                    <td>4 ft</td>
+                    <td>85 lb</td>
+                    <td>$450</td>
+                </tr>
+                <tr>
+                    <th scope="row">The Tusker</th>
+                    <td>Pickup trucks</td>
+                    <td>7.5 ft</td>
+                    <td>450 lb</td>
+                    <td>$2,800</td>
+                </tr>
+                <tr>
+                    <th scope="row">The Bull</th>
+                    <td>Work trucks and commercial lots</td>
+                    <td>9 ft</td>
+                    <td>780 lb</td>
+                    <td>$4,900</td>
+                </tr>
+                <tr>
+                    <th scope="row">The Matriarch</th>
+                    <td>Loaders and very large lots</td>
+                    <td>14 ft</td>
+                    <td>2,400 lb</td>
+                    <td>$9,500</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>The Calf</h3>
+        <p>Our smallest plow, named for the youngest member of the herd. It’s light enough to mount in a few minutes and wide enough to clear a path to the mailbox, the shed, or the back door. If your plowing vehicle has handlebars or a lawn mower deck, this one is yours.</p>
+
+        <h3>The Tusker</h3>
+        <p>The everyday plow, and the one most people take home. It fits most pickup trucks, clears a standard driveway in a few passes, and has the tusk shaped blade that rolls snow aside instead of piling it in front of you. When people say Malicious Mammoth, they mean this one.</p>
+
+        <h3>The Bull</h3>
+        <p>Built for work trucks and commercial lots, the Bull has thicker steel and a reinforced cutting edge for heavy, wet snow and the occasional curb. If you plow for a living, or for a whole neighborhood, this plow is made for long shifts.</p>
+
+        <h3>The Matriarch</h3>
+        <p>She leads the herd. The Matriarch mounts to loaders and big machines, and her wide blade can clear a warehouse lot or an airport apron in a single pass. When the storm is the kind people name, this is the plow you send out.</p>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('includes/header.html')
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById('header-placeholder').innerHTML = html;
+                const pageName = document.title.split('❄').pop().trim();
+                document.querySelector('#header-placeholder h1').textContent += ' ❄ ' + pageName;
+            });
+    </script>
+
+    <script>
+        fetch('includes/footer.html')
+            .then((response) => response.text())
+            .then((html) => {
+                const footer = document.getElementById('footer-placeholder');
+                footer.innerHTML = html;
+                footer.querySelector('a[href^="https://wave.webaim.org"]').href = 'https://wave.webaim.org/report#/' + window.location.href;
+            });
+    </script>
+</html>

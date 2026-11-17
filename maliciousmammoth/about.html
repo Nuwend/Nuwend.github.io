@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malicious Mammoth ❄ About</title>
+    <link rel="stylesheet" href="styles/mammoth.css">
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header-placeholder"></header>
+
+    <main>
+        <h2>About</h2>
+
+        <h3>Who We Are</h3>
+        <p>Malicious Mammoth began as a one truck shop with a simple complaint: the plows on the market were flat, boxy, and not very good at moving snow. We were a small crew of welders, retired snow removal drivers, and one person who just really liked mammoths. We named the company after the animal and built our first curved blade the following winter.</p>
+        <p>As for the “malicious” part, that’s how a snowbank feels about us.</p>
+
+        <figure>
+            <img src="images/about-workshop.jpg" alt="A welder shaping a curved steel plow blade in a workshop">
+            <figcaption>A new blade taking shape in the workshop.</figcaption>
+        </figure>
+
+        <h3>Why Plows</h3>
+        <p>Mammoths lived through the Ice Age, so we figure we inherited some experience with winter. We build plows and nothing else, which means every hour in the shop goes to getting one thing right. No loaders, no cranes, and no excavators. Just the tool that stands between you and a blocked driveway.</p>
+
+        <h3>How We Build Them</h3>
+        <p>Every plow starts as a sheet of thick steel. We roll it into a curve, weld it together, and paint it safety orange so that the other drivers can see you coming. Then each plow gets tested the hard way, by driving it into the biggest snowbank we can find. If the snow rolls up and away, it ships. If it doesn’t, it goes back to the welders.</p>
+        <p>Ordering is just as simple. Pick the plow that fits your vehicle, find a dealer, and place your order before the season starts. Your dealer fits it to your truck, so you don’t have to.</p>
+
+        <figure>
+            <img src="images/about-truck.jpg" alt="An orange plow mounted on a pickup truck in the snow">
+            <figcaption>A finished plow, ready for its first storm.</figcaption>
+        </figure>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('includes/header.html')
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById('header-placeholder').innerHTML = html;
+                const pageName = document.title.split('❄').pop().trim();
+                document.querySelector('#header-placeholder h1').textContent += ' ❄ ' + pageName;
+            });
+    </script>
+
+    <script>
+        fetch('includes/footer.html')
+            .then((response) => response.text())
+            .then((html) => {
+                const footer = document.getElementById('footer-placeholder');
+                footer.innerHTML = html;
+                footer.querySelector('a[href^="https://wave.webaim.org"]').href = 'https://wave.webaim.org/report#/' + window.location.href;
+            });
+    </script>
+</html>
