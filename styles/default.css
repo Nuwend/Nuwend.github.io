@@ -461,3 +461,71 @@ nav p:first-child {
     font-family: 'Fira Code', monospace;
     font-size: 14px;
 }
+
+#mascots label {
+    display: block;
+    margin: 20px 25% 8px 25%;
+    color: rgb(107, 10, 44);
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+}
+
+#mascots input {
+    display: block;
+    box-sizing: border-box;
+    width: 50%;
+    margin: 0 25% 12px 25%;
+    padding: 10px;
+    background-color: white;
+    color: rgb(36, 28, 28);
+    border: 2px solid rgb(107, 10, 44);
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 16px;
+}
+
+#mascots input:focus {
+    outline: 3px solid #7e009e;
+    outline-offset: 2px;
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 5% 40px 5%;
+    padding: 0;
+    list-style: none;
+}
+
+#cards li {
+    box-sizing: border-box;
+    width: 260px;
+    padding: 16px;
+    background-color: rgb(255, 246, 255);
+    color: rgb(36, 28, 28);
+    border: 3px solid rgb(107, 10, 44);
+    border-radius: 6px;
+    box-shadow: 6px 6px 0 rgb(107, 10, 44);
+    text-align: center;
+}
+
+#cards img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    margin: 0 auto 12px auto;
+    object-fit: cover;
+    border: 2px solid rgb(107, 10, 44);
+}
+
+#cards h3 {
+    margin: 0 0 6px 0;
+    font-size: 22px;
+}
+
+#cards p {
+    margin: 6px 0;
+    font-size: 16px;
+}
